@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
+#SBATCH -o tpot_fashion_rotation_2h.txt
+#SBATCH -c 80
+#SBATCH --mem=200G
+#SBATCH -t 1-00:00:00
+
+srun papermill --log-output tpot_fashion_rotation_2h.ipynb tpot_fashion_rotation_2h.ipynb
+srun sleep 60
