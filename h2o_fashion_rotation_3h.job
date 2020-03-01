@@ -2,8 +2,8 @@
 #SBATCH -J aml
 #SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
 #SBATCH -o h2o_fashion_rotation_3h.txt
-#SBATCH -c 64
-#SBATCH --mem=64G
+#SBATCH -c 80
+#SBATCH --mem=100G
 #SBATCH -t 1-00:00:00
 
 srun papermill --log-output h2o_fashion_rotation_3h.ipynb h2o_fashion_rotation_3h.ipynb

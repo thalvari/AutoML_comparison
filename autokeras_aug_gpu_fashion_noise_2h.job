@@ -2,8 +2,8 @@
 #SBATCH -J aml
 #SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
 #SBATCH -o autokeras_aug_fashion_noise_2h.txt
-#SBATCH -c 4
-#SBATCH --mem=96G
+#SBATCH -c 8
+#SBATCH --mem=100G
 #SBATCH -p gpu
 #SBATCH --gres=gpu:1
 #SBATCH --constraint=v100
