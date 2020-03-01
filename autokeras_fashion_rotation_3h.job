@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
+#SBATCH -o autokeras_fashion_rotation_3h.txt
+#SBATCH -c 48
+#SBATCH --mem=32G
+#SBATCH -t 1-00:00:00
+
+srun papermill --log-output autokeras_fashion_rotation_3h.ipynb autokeras_fashion_rotation_3h.ipynb
+srun sleep 60
