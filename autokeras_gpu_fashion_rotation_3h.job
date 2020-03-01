@@ -2,7 +2,7 @@
 #SBATCH -J aml
 #SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
 #SBATCH -o autokeras_fashion_rotation_3h.txt
-#SBATCH -c 48
+#SBATCH -c 4
 #SBATCH --mem=96G
 #SBATCH -p gpu
 #SBATCH --gres=gpu:1
