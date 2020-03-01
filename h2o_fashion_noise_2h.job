@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -J na
+#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
+#SBATCH -o h2o_fashion_noise_2h.txt
+#SBATCH -c 48
+#SBATCH --mem=64G
+#SBATCH -t 1-0:00:00
+
+srun papermill --log-output h2o_fashion_noise_2h.ipynb h2o_fashion_noise_2h.ipynb
+srun sleep 60
