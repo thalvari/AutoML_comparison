@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH -J aml
-#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
 #SBATCH -o test.txt
 #SBATCH -c 20
 #SBATCH --mem=32G
@@ -8,4 +7,3 @@
 #SBATCH -t 10:00
 
 srun papermill --log-output test.ipynb test.ipynb
-srun sleep 60
