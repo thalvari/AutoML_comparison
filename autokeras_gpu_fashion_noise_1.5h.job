@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
+#SBATCH -o autokeras_fashion_noise_1.5h.txt
+#SBATCH -c 8
+#SBATCH --mem=100G
+#SBATCH -p gpu
+#SBATCH --gres=gpu:1
+#SBATCH --constraint=v100
+#SBATCH -t 7-00:00:00
+
+srun papermill --log-output autokeras_fashion_noise_1.5h.ipynb autokeras_fashion_noise_1.5h.ipynb
+srun sleep 60
