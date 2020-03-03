@@ -2,7 +2,7 @@
 #SBATCH -J aml
 #SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
 #SBATCH -o h2o_fashion_rotation_6h.txt
-#SBATCH -c 64
+#SBATCH -c 40
 #SBATCH --mem=300G
 #SBATCH -t 1-00:00:00
 
