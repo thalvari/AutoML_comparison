@@ -131,6 +131,7 @@ err_x_test_list = [np.apply_along_axis(error_generator, 1, x_test, ep) for ep in
 
 
 class AbstractModel(ABC):
+
     model = None
     time_train = np.nan
 
