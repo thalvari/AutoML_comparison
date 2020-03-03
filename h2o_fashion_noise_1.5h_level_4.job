@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH -J aml
-#SBATCH -o h2o_fashion_noise_1.5h.txt
+#SBATCH -o h2o_fashion_noise_1.5h_level_4.txt
 #SBATCH -c 40
-#SBATCH --mem=100G
+#SBATCH --mem=150G
 #SBATCH -t 1-00:00:00
 
-srun python run.py h2o fashion noise 90 40 200
+srun python run.py h2o fashion noise 90 40 150 --err_level 4

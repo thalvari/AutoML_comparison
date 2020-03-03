@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -J aml
 #SBATCH -o test2.txt
-#SBATCH -c 6
+#SBATCH -c 4
 #SBATCH --mem=16G
 #SBATCH -p test
 #SBATCH -t 10:00
 
-srun python run.py autokeras digits rotation 8 6 16 --err_level 0
+srun python run.py autokeras digits rotation 5 4 16 --err_level 0 --n_images 500
