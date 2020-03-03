@@ -1,10 +1,8 @@
 #!/bin/bash
 #SBATCH -J aml
-#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
 #SBATCH -o tpot_digits_rotation_1h.txt
 #SBATCH -c 40
 #SBATCH --mem=50G
 #SBATCH -t 1-00:00:00
 
-srun papermill --log-output tpot_digits_rotation_1h.ipynb tpot_digits_rotation_1h.ipynb
-srun sleep 60
+srun python run.py tpot digits rotation 60 40 50

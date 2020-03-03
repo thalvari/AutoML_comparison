@@ -1,10 +1,8 @@
 #!/bin/bash
 #SBATCH -J aml
-#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
 #SBATCH -o tpot_fashion_noise_3h.txt
 #SBATCH -c 40
-#SBATCH --mem=300G
+#SBATCH --mem=200G
 #SBATCH -t 1-00:00:00
 
-srun papermill --log-output tpot_fashion_noise_3h.ipynb tpot_fashion_noise_3h.ipynb
-srun sleep 60
+srun python run.py tpot fashion noise 180 40 250
