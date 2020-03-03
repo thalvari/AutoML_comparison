@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH -o test.txt
+#SBATCH -c 4
+#SBATCH --mem=16G
+#SBATCH -p gpu
+#SBATCH --gres=gpu:1
+#SBATCH -t 10:00
+
+srun python run.py autokeras fashion rotation 5 4 16 --gpu --err_level 5 --n_images 5000
