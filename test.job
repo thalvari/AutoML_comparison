@@ -3,7 +3,7 @@
 #SBATCH -o test.txt
 #SBATCH -c 4
 #SBATCH --mem=16G
-#SBATCH -p gpu
+#SBATCH -p test
 #SBATCH --gres=gpu:1
 #SBATCH -t 10:00
 
