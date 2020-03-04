@@ -311,7 +311,7 @@ class TPOTModel(AbstractModel):
 
 
 def main(args):
-    print_gpu_info()
+    # print_gpu_info()
 
     model_name = args.model_name
     dataset_name = args.dataset_name
