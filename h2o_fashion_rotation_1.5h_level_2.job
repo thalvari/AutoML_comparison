@@ -2,7 +2,7 @@
 #SBATCH -J aml
 #SBATCH -o h2o_fashion_rotation_1.5h_level_2.txt
 #SBATCH -c 40
-#SBATCH --mem=150G
+#SBATCH --mem=250G
 #SBATCH -t 1-00:00:00
 
-srun python run.py h2o fashion rotation 90 40 150 --err_level 2
+srun python run.py h2o fashion rotation 90 40 250 --err_level 2
