@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J aml
-#SBATCH -o autokeras_fashion_rotation_3h.txt
+#SBATCH -o autokeras_gpu_fashion_rotation_3h.txt
 #SBATCH -c 8
 #SBATCH --mem=150G
 #SBATCH -p gpu
