@@ -95,7 +95,7 @@ def rotate(arr, angle, data_params_dict):
 
 
 def get_err_data_lists(x_train, x_test, err_source, err_level, dataset_name, data_params_dict):
-    if err_source == "add_noise":
+    if err_source == "noise":
         error_generator = add_noise
         err_param_name = "std"
         if dataset_name == "digits":
