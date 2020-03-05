@@ -5,4 +5,4 @@
 #SBATCH --mem=350G
 #SBATCH -t 1-00:00:00
 
-srun python test.py h2o fashion noise 90 40 350 --err_level 4
+srun python run.py h2o fashion noise 90 40 350 --err_level 4
