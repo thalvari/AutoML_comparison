@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J aml
-#SBATCH -o autokeras_aug_gpu_digits_rotation_15min.txt
+#SBATCH -o autokeras_aug_gpu_digits_rotation_15m.txt
 #SBATCH -c 4
 #SBATCH --mem=50G
 #SBATCH -p gpu
