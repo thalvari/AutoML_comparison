@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH -o h2o_digits_rotation_15min.txt
+#SBATCH -c 40
+#SBATCH --mem=50G
+#SBATCH -t 1-00:00:00
+
+srun python run.py h2o rotation noise 15 40 50

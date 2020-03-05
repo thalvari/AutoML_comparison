@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH -o tpot_digits_noise_30min.txt
+#SBATCH -c 40
+#SBATCH --mem=50G
+#SBATCH -t 1-00:00:00
+
+srun python run.py tpot digits noise 30 40 50
