@@ -338,6 +338,8 @@ def main(args):
             model_class = TPOTModel
         model = model_class(model_full_name, err_source, err_param_name, dataset_name, time_limit_mins, augment,
                             data_params_dict, n_threads, mem_size_gb)
+        if err_level is not None:
+            err_level_train = err_level
         model.prepare(err_x_train, y_train, err_params[err_level_train])
         for err_level_test, err_x_test in enumerate(err_x_test_list):
             scores.append({

@@ -1,8 +1,0 @@
-#!/bin/bash
-#SBATCH -J aml
-#SBATCH -o test2.txt
-#SBATCH -c 40
-#SBATCH --mem=250G
-#SBATCH -t 1-00:00:00
-
-srun python run.py h2o fashion noise 362 24 200 --err_level 4
