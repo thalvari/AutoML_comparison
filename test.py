@@ -15,7 +15,6 @@ import h2o
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import pytorch_model_summary as pms
 import tensorflow as tf
 import torch
 from PIL import Image
@@ -199,8 +198,7 @@ class AutoKerasModel(AbstractModel):
         self.model.export_autokeras_model(f"{model_path_prefix}.pkl")
 
     def get_summary(self, n_train):
-        image_hw = self.data_params_dict["image_hw"]
-        return pms.summary(self.model.cnn.best_model.produce_model(), torch.zeros(1, 1, n_train, image_hw ** 2))
+        return repr(self.model.cnn.best_model.produce_model())
 
     def predict(self, x_test, y_test):
         image_hw = self.data_params_dict["image_hw"]
