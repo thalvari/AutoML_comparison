@@ -6,4 +6,4 @@
 #SBATCH --mem=50G
 #SBATCH -t 1-00:00:00
 
-srun python run.py h2o rotation noise 30 40 50
+srun python run.py h2o digits rotation 30 40 50
