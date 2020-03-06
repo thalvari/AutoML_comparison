@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -J aml
 #SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
-#SBATCH -o h2o_fashion_rotation_6h_level_3.txt
+#SBATCH -o h2o_fashion_rotation_6h_level_3_alt.txt
 #SBATCH -c 40
 #SBATCH --mem=60G
 #SBATCH -t 1-00:00:00
 
-srun python run.py h2o fashion rotation 360 40 20 --err_level 3
+srun python test.py h2o fashion rotation 360 40 20 --err_level 3
