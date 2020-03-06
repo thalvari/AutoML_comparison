@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
+#SBATCH -o tpot_fashion_rotation_6h.txt
+#SBATCH -c 40
+#SBATCH --mem=250G
+#SBATCH -t 1-00:00:00
+
+srun python run.py tpot fashion rotation 360 40 250

@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
+#SBATCH -o tpot_digits_rotation_30min.txt
+#SBATCH -c 40
+#SBATCH --mem=50G
+#SBATCH -t 1-00:00:00
+
+srun python run.py tpot digits rotation 30 40 50

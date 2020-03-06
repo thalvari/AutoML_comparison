@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
+#SBATCH -o test.txt
+#SBATCH -c 4
+#SBATCH --mem=8G
+#SBATCH -t 10:00
+
+srun python run.py h2o digits noise 1 4 8 --n_images 200 --err_level 0

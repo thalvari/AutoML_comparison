@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
+#SBATCH -o autokeras_gpu_digits_noise_30m.txt
+#SBATCH -c 4
+#SBATCH --mem=50G
+#SBATCH -p gpu
+#SBATCH --gres=gpu:1
+#SBATCH --constraint=v100
+#SBATCH -t 7-00:00:00
+
+srun python run.py autokeras digits noise 30 4 50 --gpu
