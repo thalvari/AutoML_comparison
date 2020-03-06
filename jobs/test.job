@@ -7,4 +7,4 @@
 #SBATCH -p test
 #SBATCH -t 10:00
 
-srun python run.py h2o digits noise 1 4 8 --n_images 200 --err_level 0
+srun python run.py h2o digits noise 9 4 8 --n_images 200 --err_level 0
