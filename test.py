@@ -135,8 +135,8 @@ class AbstractModel(ABC):
     def prepare(self, x_train, y_train, err_param):
         model_description = f"{self.model_full_name}_{self.err_param_name}_{np.round(err_param, 3)}_" \
                             f"time_limit_mins_{self.time_limit_mins}"
-        model_path_prefix = f"models_{self.dataset_name}_{self.err_source}/model_{model_description}"
-        summary_path = f"models_{self.dataset_name}_{self.err_source}/summary_{model_description}.txt"
+        model_path_prefix = f"models_{self.dataset_name}_{self.err_source}_alt/model_{model_description}"
+        summary_path = f"models_{self.dataset_name}_{self.err_source}_alt/summary_{model_description}.txt"
 
         if Path(summary_path).is_file():
             self.load(model_path_prefix)
@@ -231,9 +231,7 @@ class H2OAutoMLModel(AbstractModel):
         x_cols = np.array(training_frame.columns)[:-1].tolist()
         y_cols = np.array(training_frame.columns)[-1].tolist()
         training_frame[y_cols] = training_frame[y_cols].asfactor()
-        self.model = H2OAutoML(
-            max_runtime_secs=60 * self.time_limit_mins, exclude_algos=["XGBoost"], seed=seed, verbosity="debug"
-        )
+        self.model = H2OAutoML(max_runtime_secs=60 * self.time_limit_mins, seed=seed, verbosity="debug")
         time_start = time.time()
         self.model.train(x=x_cols, y=y_cols, training_frame=training_frame)
         self.time_train = timedelta(seconds=np.round(time.time() - time_start))
@@ -243,7 +241,7 @@ class H2OAutoMLModel(AbstractModel):
 
     def save(self, model_path_prefix):
         temp_path = h2o.save_model(
-            model=self.model.leader, path=f"models_{self.dataset_name}_{self.err_source}", force=True
+            model=self.model.leader, path=f"models_{self.dataset_name}_{self.err_source}_alt", force=True
         )
         source = Path(temp_path)
         target = Path(model_path_prefix)
@@ -355,7 +353,7 @@ def main(args):
     scores_df = pd.DataFrame(scores)
     print(scores_df)
     if err_level is None:
-        scores_path = f"scores_{dataset_name}_{err_source}/{model_full_name}_{err_source}_time_limit_mins_" \
+        scores_path = f"scores_{dataset_name}_{err_source}_alt/{model_full_name}_{err_source}_time_limit_mins_" \
                       f"{time_limit_mins}.pkl"
         scores_df.to_pickle(scores_path)
 

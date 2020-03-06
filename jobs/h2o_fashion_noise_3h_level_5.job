@@ -3,7 +3,7 @@
 #SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
 #SBATCH -o h2o_fashion_noise_3h_level_5.txt
 #SBATCH -c 40
-#SBATCH --mem=350G
+#SBATCH --mem=60G
 #SBATCH -t 1-00:00:00
 
-srun python run.py h2o fashion noise 180 40 350 --err_level 5
+srun python test.py h2o fashion noise 180 40 20 --err_level 5
