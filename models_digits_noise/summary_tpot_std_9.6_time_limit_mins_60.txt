@@ -1,0 +1,7 @@
+Actual train time: 1:11:13
+
+Steps:
+0. SelectFwe(alpha=0.026000000000000002,
+          score_func=<function f_classif at 0x2b8249a129d8>)
+1. ZeroCount()
+2. MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)

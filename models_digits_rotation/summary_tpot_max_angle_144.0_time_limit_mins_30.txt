@@ -1,0 +1,23 @@
+Actual train time: 0:31:56
+
+Steps:
+0. StackingEstimator(estimator=RandomForestClassifier(bootstrap=False,
+                                                   ccp_alpha=0.0,
+                                                   class_weight=None,
+                                                   criterion='entropy',
+                                                   max_depth=None,
+                                                   max_features=0.15000000000000002,
+                                                   max_leaf_nodes=None,
+                                                   max_samples=None,
+                                                   min_impurity_decrease=0.0,
+                                                   min_impurity_split=None,
+                                                   min_samples_leaf=17,
+                                                   min_samples_split=15,
+                                                   min_weight_fraction_leaf=0.0,
+                                                   n_estimators=100,
+                                                   n_jobs=None, oob_score=False,
+                                                   random_state=42, verbose=0,
+                                                   warm_start=False))
+1. KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=None, n_neighbors=1, p=2,
+                     weights='distance')

@@ -1,0 +1,4 @@
+Actual train time: 1:15:25
+
+Steps:
+0. MultinomialNB(alpha=100.0, class_prior=None, fit_prior=True)

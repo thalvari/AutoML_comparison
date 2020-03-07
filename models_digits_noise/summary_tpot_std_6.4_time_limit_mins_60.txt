@@ -1,0 +1,9 @@
+Actual train time: 1:00:44
+
+Steps:
+0. SelectFwe(alpha=0.038, score_func=<function f_classif at 0x2b8249a129d8>)
+1. StackingEstimator(estimator=MultinomialNB(alpha=0.01, class_prior=None,
+                                          fit_prior=True))
+2. KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=None, n_neighbors=34, p=2,
+                     weights='distance')

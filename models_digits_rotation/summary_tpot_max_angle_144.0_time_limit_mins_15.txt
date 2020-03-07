@@ -1,0 +1,6 @@
+Actual train time: 0:17:02
+
+Steps:
+0. KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=None, n_neighbors=2, p=2,
+                     weights='distance')

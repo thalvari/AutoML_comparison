@@ -1,0 +1,16 @@
+Actual train time: 1:00:06
+
+Steps:
+0. StackingEstimator(estimator=MultinomialNB(alpha=0.001, class_prior=None,
+                                          fit_prior=False))
+1. SelectFwe(alpha=0.025, score_func=<function f_classif at 0x2b8249a129d8>)
+2. StackingEstimator(estimator=MultinomialNB(alpha=0.01, class_prior=None,
+                                          fit_prior=False))
+3. RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features=0.2,
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=11, min_samples_split=17,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False, random_state=42, verbose=0,
+                       warm_start=False)

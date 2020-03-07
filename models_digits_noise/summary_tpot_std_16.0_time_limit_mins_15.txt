@@ -1,0 +1,6 @@
+Actual train time: 0:25:29
+
+Steps:
+0. StackingEstimator(estimator=MultinomialNB(alpha=1.0, class_prior=None,
+                                          fit_prior=False))
+1. GaussianNB(priors=None, var_smoothing=1e-09)

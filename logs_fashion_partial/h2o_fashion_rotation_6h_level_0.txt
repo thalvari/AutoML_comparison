@@ -1,0 +1,220 @@
+2020-03-07 00:33:28.742030: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/opt/Java/1.8.0_144/lib:/appl/opt/cuDNN/7.5.0.56-CUDA-10.0.130/lib64:/appl/opt/CUDA/10.0.130/nvvm/lib64:/appl/opt/CUDA/10.0.130/extras/CUPTI/lib64:/appl/opt/CUDA/10.0.130/lib64:/appl/opt/Python/3.7.0-intel-2018b/lib/python3.7/site-packages/numpy-1.14.5-py3.7-linux-x86_64.egg/numpy/core/lib:/appl/opt/Python/3.7.0-intel-2018b/lib:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib64:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib:/appl/opt/GMP/6.1.2-GCCcore-7.3.0/lib:/appl/opt/XZ/5.2.4-GCCcore-7.3.0/lib:/appl/opt/SQLite/3.24.0-intel-2018b/lib:/appl/opt/Tcl/8.6.8-GCCcore-7.3.0/lib:/appl/opt/libreadline/7.0-intel-2018b/lib:/appl/opt/ncurses/6.1-intel-2018b/lib:/appl/opt/zlib/1.2.11-GCCcore-7.3.0/lib:/appl/opt/bzip2/1.0.6-GCCcore-7.3.0/lib:/appl/opt/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64:/appl/opt/imkl/2018.3.222-iimpi-2018b/lib/intel64:/appl/opt/impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30/lib64:/appl/opt/ifort/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/tbb/lib/intel64/gcc4.4:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/binutils/2.30-GCCcore-7.3.0/lib:/appl/opt/GCCcore/7.3.0/lib/gcc/x86_64-pc-linux-gnu/7.3.0:/appl/opt/GCCcore/7.3.0/lib64:/appl/opt/GCCcore/7.3.0/lib
+2020-03-07 00:33:28.743419: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/opt/Java/1.8.0_144/lib:/appl/opt/cuDNN/7.5.0.56-CUDA-10.0.130/lib64:/appl/opt/CUDA/10.0.130/nvvm/lib64:/appl/opt/CUDA/10.0.130/extras/CUPTI/lib64:/appl/opt/CUDA/10.0.130/lib64:/appl/opt/Python/3.7.0-intel-2018b/lib/python3.7/site-packages/numpy-1.14.5-py3.7-linux-x86_64.egg/numpy/core/lib:/appl/opt/Python/3.7.0-intel-2018b/lib:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib64:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib:/appl/opt/GMP/6.1.2-GCCcore-7.3.0/lib:/appl/opt/XZ/5.2.4-GCCcore-7.3.0/lib:/appl/opt/SQLite/3.24.0-intel-2018b/lib:/appl/opt/Tcl/8.6.8-GCCcore-7.3.0/lib:/appl/opt/libreadline/7.0-intel-2018b/lib:/appl/opt/ncurses/6.1-intel-2018b/lib:/appl/opt/zlib/1.2.11-GCCcore-7.3.0/lib:/appl/opt/bzip2/1.0.6-GCCcore-7.3.0/lib:/appl/opt/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64:/appl/opt/imkl/2018.3.222-iimpi-2018b/lib/intel64:/appl/opt/impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30/lib64:/appl/opt/ifort/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/tbb/lib/intel64/gcc4.4:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/binutils/2.30-GCCcore-7.3.0/lib:/appl/opt/GCCcore/7.3.0/lib/gcc/x86_64-pc-linux-gnu/7.3.0:/appl/opt/GCCcore/7.3.0/lib64:/appl/opt/GCCcore/7.3.0/lib
+2020-03-07 00:33:28.743465: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Using TensorFlow backend.
+Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex.
+Checking whether there is an H2O instance running at http://localhost:54321 ..... not found.
+Attempting to start a local H2O server...
+  Java Version: java version "1.8.0_144"; Java(TM) SE Runtime Environment (build 1.8.0_144-b01); Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+  Starting server from /wrk/users/thalvari/AutoML_comparison/venv/lib/python3.7/site-packages/h2o/backend/bin/h2o.jar
+  Ice root: /wrk/users/thalvari/tmpny95k6t1
+  JVM stdout: /wrk/users/thalvari/tmpny95k6t1/h2o_thalvari_started_from_python.out
+  JVM stderr: /wrk/users/thalvari/tmpny95k6t1/h2o_thalvari_started_from_python.err
+  Server is running at http://127.0.0.1:54321
+Connecting to H2O server at http://127.0.0.1:54321 ... successful.
+--------------------------  ------------------------------------------------------------------
+H2O cluster uptime:         01 secs
+H2O cluster timezone:       Europe/Helsinki
+H2O data parsing timezone:  UTC
+H2O cluster version:        3.28.0.3
+H2O cluster version age:    1 month and 1 day
+H2O cluster name:           #133107
+H2O cluster total nodes:    1
+H2O cluster free memory:    335.4 Gb
+H2O cluster total cores:    40
+H2O cluster allowed cores:  40
+H2O cluster status:         accepting new members, healthy
+H2O connection url:         http://127.0.0.1:54321
+H2O connection proxy:       {'http': None, 'https': None}
+H2O internal security:      False
+H2O API Extensions:         Amazon S3, XGBoost, Algos, AutoML, Core V3, TargetEncoder, Core V4
+Python version:             3.7.0 final
+--------------------------  ------------------------------------------------------------------
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+AutoML progress: |
+00:34:05.905: Project: AutoML_20200307_03405902
+00:34:05.909: Setting stopping tolerance adaptively based on the training frame: 0.00408248290463863
+00:34:05.909: Build control seed: 42
+00:34:05.911: training frame: Frame key: automl_training_py_1_sid_9db0    cols: 785    rows: 60000  chunks: 32    size: 43160054  checksum: 703063233489806
+00:34:05.912: validation frame: NULL
+00:34:05.912: leaderboard frame: NULL
+00:34:05.912: blending frame: NULL
+00:34:05.912: response column: C785
+00:34:05.912: fold column: null
+00:34:05.912: weights column: null
+00:34:05.923: Loading execution steps: [{XGBoost : defaults}, {GLM : defaults}, {DRF : [def_1]}, {GBM : defaults}, {DeepLearning : defaults}, {DRF : [XRT]}, {XGBoost : grids}, {GBM : grids}, {DeepLearning : grids}, {StackedEnsemble : defaults}]
+00:34:05.931: AutoML job created: 2020.03.07 00:34:05.902
+00:34:05.933: AutoML build started: 2020.03.07 00:34:05.932
+00:34:05.951: AutoML: starting XGBoost_1_AutoML_20200307_003405 model training
+00:34:06.48: XGBoost_1_AutoML_20200307_003405 [XGBoost def_1] started
+
+██████
+01:03:09.518: XGBoost_1_AutoML_20200307_003405 [XGBoost def_1] complete
+01:03:09.594: New leader: XGBoost_1_AutoML_20200307_003405, mean_per_class_error: 0.09513333333333333
+01:03:09.595: AutoML: starting XGBoost_2_AutoML_20200307_003405 model training
+01:03:09.613: XGBoost_2_AutoML_20200307_003405 [XGBoost def_2] started
+
+████
+01:30:41.192: XGBoost_2_AutoML_20200307_003405 [XGBoost def_2] complete
+01:30:41.196: AutoML: starting XGBoost_3_AutoML_20200307_003405 model training
+01:30:41.219: XGBoost_3_AutoML_20200307_003405 [XGBoost def_3] started
+
+████
+01:54:40.426: XGBoost_3_AutoML_20200307_003405 [XGBoost def_3] complete
+01:54:40.435: AutoML: starting GLM_1_AutoML_20200307_003405 model training
+01:54:40.468: GLM_1_AutoML_20200307_003405 [GLM def_1] started
+
+
+01:56:48.658: GLM_1_AutoML_20200307_003405 [GLM def_1] complete
+01:56:48.668: AutoML: starting DRF_1_AutoML_20200307_003405 model training
+01:56:48.698: DRF_1_AutoML_20200307_003405 [DRF def_1] started
+
+█
+02:02:03.645: DRF_1_AutoML_20200307_003405 [DRF def_1] complete
+02:02:03.652: AutoML: starting GBM_1_AutoML_20200307_003405 model training
+02:02:03.668: GBM_1_AutoML_20200307_003405 [GBM def_1] started
+
+██
+02:14:33.135: GBM_1_AutoML_20200307_003405 [GBM def_1] complete
+02:14:33.141: AutoML: starting GBM_2_AutoML_20200307_003405 model training
+02:14:33.148: GBM_2_AutoML_20200307_003405 [GBM def_2] started
+
+█
+02:26:32.418: GBM_2_AutoML_20200307_003405 [GBM def_2] complete
+02:26:32.425: AutoML: starting GBM_3_AutoML_20200307_003405 model training
+02:26:32.434: GBM_3_AutoML_20200307_003405 [GBM def_3] started
+
+███
+02:43:25.402: GBM_3_AutoML_20200307_003405 [GBM def_3] complete
+02:43:25.409: AutoML: starting GBM_4_AutoML_20200307_003405 model training
+02:43:25.415: GBM_4_AutoML_20200307_003405 [GBM def_4] started
+
+███
+03:06:10.618: GBM_4_AutoML_20200307_003405 [GBM def_4] complete
+03:06:10.625: AutoML: starting GBM_5_AutoML_20200307_003405 model training
+03:06:10.633: GBM_5_AutoML_20200307_003405 [GBM def_5] started
+
+████
+03:31:39.480: GBM_5_AutoML_20200307_003405 [GBM def_5] complete
+03:31:39.504: AutoML: starting DeepLearning_1_AutoML_20200307_003405 model training
+03:31:39.511: DeepLearning_1_AutoML_20200307_003405 [DeepLearning def_1] started
+
+
+03:32:23.522: DeepLearning_1_AutoML_20200307_003405 [DeepLearning def_1] complete
+03:32:23.530: AutoML: starting XRT_1_AutoML_20200307_003405 model training
+03:32:23.536: XRT_1_AutoML_20200307_003405 [DRF XRT (Extremely Randomized Trees)] started
+
+█
+03:37:58.631: XRT_1_AutoML_20200307_003405 [DRF XRT (Extremely Randomized Trees)] complete
+03:37:58.643: AutoML: starting XGBoost_grid__1_AutoML_20200307_003405 hyperparameter search
+
+
+03:37:59.300: XGBoost_grid__1_AutoML_20200307_003405 [XGBoost Grid Search] started
+
+███
+03:55:10.283: Built: 1 models for search: XGBoost_grid__1_AutoML_20200307_003405 [XGBoost Grid Search]
+
+████
+04:26:15.902: Built: 2 models for search: XGBoost_grid__1_AutoML_20200307_003405 [XGBoost Grid Search]
+
+████
+04:47:45.111: Built: 3 models for search: XGBoost_grid__1_AutoML_20200307_003405 [XGBoost Grid Search]
+
+
+04:51:17.446: Built: 4 models for search: XGBoost_grid__1_AutoML_20200307_003405 [XGBoost Grid Search]
+
+
+04:51:28.453: Built: 5 models for search: XGBoost_grid__1_AutoML_20200307_003405 [XGBoost Grid Search]
+04:51:28.463: XGBoost_grid__1_AutoML_20200307_003405 [XGBoost Grid Search] complete
+04:51:28.464: AutoML: starting GBM_grid__1_AutoML_20200307_003405 hyperparameter search
+
+
+04:51:29.769: GBM_grid__1_AutoML_20200307_003405 [GBM Grid Search] started
+
+███
+05:08:08.217: Built: 1 models for search: GBM_grid__1_AutoML_20200307_003405 [GBM Grid Search]
+
+███
+05:29:53.554: Built: 2 models for search: GBM_grid__1_AutoML_20200307_003405 [GBM Grid Search]
+
+█
+05:34:52.873: Built: 3 models for search: GBM_grid__1_AutoML_20200307_003405 [GBM Grid Search]
+
+
+05:35:36.644: Built: 4 models for search: GBM_grid__1_AutoML_20200307_003405 [GBM Grid Search]
+05:35:36.658: GBM_grid__1_AutoML_20200307_003405 [GBM Grid Search] complete
+05:35:36.658: AutoML: starting DeepLearning_grid__1_AutoML_20200307_003405 hyperparameter search
+05:35:36.682: DeepLearning_grid__1_AutoML_20200307_003405 [DeepLearning Grid Search] started
+
+
+05:39:21.707: Built: 1 models for search: DeepLearning_grid__1_AutoML_20200307_003405 [DeepLearning Grid Search]
+
+█
+05:47:17.4: Built: 2 models for search: DeepLearning_grid__1_AutoML_20200307_003405 [DeepLearning Grid Search]
+
+█
+05:50:58.43: Built: 3 models for search: DeepLearning_grid__1_AutoML_20200307_003405 [DeepLearning Grid Search]
+05:50:58.58: DeepLearning_grid__1_AutoML_20200307_003405 [DeepLearning Grid Search] complete
+05:50:58.59: AutoML: starting DeepLearning_grid__2_AutoML_20200307_003405 hyperparameter search
+05:50:58.74: DeepLearning_grid__2_AutoML_20200307_003405 [DeepLearning Grid Search] started
+
+█
+05:54:13.79: Built: 1 models for search: DeepLearning_grid__2_AutoML_20200307_003405 [DeepLearning Grid Search]
+
+█
+06:02:41.183: Built: 2 models for search: DeepLearning_grid__2_AutoML_20200307_003405 [DeepLearning Grid Search]
+
+
+06:05:52.236: Built: 3 models for search: DeepLearning_grid__2_AutoML_20200307_003405 [DeepLearning Grid Search]
+06:05:52.253: DeepLearning_grid__2_AutoML_20200307_003405 [DeepLearning Grid Search] complete
+06:05:52.253: AutoML: starting DeepLearning_grid__3_AutoML_20200307_003405 hyperparameter search
+06:05:52.265: DeepLearning_grid__3_AutoML_20200307_003405 [DeepLearning Grid Search] started
+
+█
+06:09:13.972: Built: 1 models for search: DeepLearning_grid__3_AutoML_20200307_003405 [DeepLearning Grid Search]
+
+█
+06:16:03.313: Built: 2 models for search: DeepLearning_grid__3_AutoML_20200307_003405 [DeepLearning Grid Search]
+
+█
+06:21:10.423: Built: 3 models for search: DeepLearning_grid__3_AutoML_20200307_003405 [DeepLearning Grid Search]
+06:21:10.440: DeepLearning_grid__3_AutoML_20200307_003405 [DeepLearning Grid Search] complete
+06:21:10.444: AutoML: starting StackedEnsemble_BestOfFamily_AutoML_20200307_003405 model training
+06:21:10.454: StackedEnsemble_BestOfFamily_AutoML_20200307_003405 [StackedEnsemble best (built using top model from each algorithm type)] started
+
+
+06:21:47.458: StackedEnsemble_BestOfFamily_AutoML_20200307_003405 [StackedEnsemble best (built using top model from each algorithm type)] complete
+06:21:47.476: AutoML: starting StackedEnsemble_AllModels_AutoML_20200307_003405 model training
+06:21:47.483: StackedEnsemble_AllModels_AutoML_20200307_003405 [StackedEnsemble all (built using all AutoML models)] started
+
+██| 100%
+
+06:32:47.278: StackedEnsemble_AllModels_AutoML_20200307_003405 [StackedEnsemble all (built using all AutoML models)] complete
+06:32:47.297: New leader: StackedEnsemble_AllModels_AutoML_20200307_003405, mean_per_class_error: 0.08996666666666668
+06:32:47.298: Actual modeling steps: [{XGBoost : [def_1 (10), def_2 (10), def_3 (10)]}, {GLM : [def_1 (10)]}, {DRF : [def_1 (10)]}, {GBM : [def_1 (10), def_2 (10), def_3 (10), def_4 (10), def_5 (10)]}, {DeepLearning : [def_1 (10)]}, {DRF : [XRT (10)]}, {XGBoost : [grid_1 (100)]}, {GBM : [grid_1 (60)]}, {DeepLearning : [grid_1 (20), grid_2 (20), grid_3 (20)]}, {StackedEnsemble : [best (10), all (10)]}]
+06:32:47.298: AutoML build stopped: 2020.03.07 06:32:47.298
+06:32:47.298: AutoML build done: built 32 models
+06:32:47.298: AutoML duration:  5:58:41.366
+06:32:47.305: Verifying training frame immutability. . .
+06:32:47.306: Training frame was not mutated (as expected).
+
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+H2O session _sid_9db0 closed.
+  model_name  train_max_angle  test_max_angle  accuracy
+0        h2o              0.0             0.0     0.905
+1        h2o              0.0            36.0     0.543
+2        h2o              0.0            72.0     0.345
+3        h2o              0.0           108.0     0.253
+4        h2o              0.0           144.0     0.220
+5        h2o              0.0           180.0     0.222
