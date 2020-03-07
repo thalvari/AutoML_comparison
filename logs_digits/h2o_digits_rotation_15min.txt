@@ -1,0 +1,1911 @@
+2020-03-07 01:50:03.846603: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/opt/Java/1.8.0_144/lib:/appl/opt/cuDNN/7.5.0.56-CUDA-10.0.130/lib64:/appl/opt/CUDA/10.0.130/nvvm/lib64:/appl/opt/CUDA/10.0.130/extras/CUPTI/lib64:/appl/opt/CUDA/10.0.130/lib64:/appl/opt/Python/3.7.0-intel-2018b/lib/python3.7/site-packages/numpy-1.14.5-py3.7-linux-x86_64.egg/numpy/core/lib:/appl/opt/Python/3.7.0-intel-2018b/lib:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib64:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib:/appl/opt/GMP/6.1.2-GCCcore-7.3.0/lib:/appl/opt/XZ/5.2.4-GCCcore-7.3.0/lib:/appl/opt/SQLite/3.24.0-intel-2018b/lib:/appl/opt/Tcl/8.6.8-GCCcore-7.3.0/lib:/appl/opt/libreadline/7.0-intel-2018b/lib:/appl/opt/ncurses/6.1-intel-2018b/lib:/appl/opt/zlib/1.2.11-GCCcore-7.3.0/lib:/appl/opt/bzip2/1.0.6-GCCcore-7.3.0/lib:/appl/opt/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64:/appl/opt/imkl/2018.3.222-iimpi-2018b/lib/intel64:/appl/opt/impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30/lib64:/appl/opt/ifort/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/tbb/lib/intel64/gcc4.4:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/binutils/2.30-GCCcore-7.3.0/lib:/appl/opt/GCCcore/7.3.0/lib/gcc/x86_64-pc-linux-gnu/7.3.0:/appl/opt/GCCcore/7.3.0/lib64:/appl/opt/GCCcore/7.3.0/lib
+2020-03-07 01:50:03.848000: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/opt/Java/1.8.0_144/lib:/appl/opt/cuDNN/7.5.0.56-CUDA-10.0.130/lib64:/appl/opt/CUDA/10.0.130/nvvm/lib64:/appl/opt/CUDA/10.0.130/extras/CUPTI/lib64:/appl/opt/CUDA/10.0.130/lib64:/appl/opt/Python/3.7.0-intel-2018b/lib/python3.7/site-packages/numpy-1.14.5-py3.7-linux-x86_64.egg/numpy/core/lib:/appl/opt/Python/3.7.0-intel-2018b/lib:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib64:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib:/appl/opt/GMP/6.1.2-GCCcore-7.3.0/lib:/appl/opt/XZ/5.2.4-GCCcore-7.3.0/lib:/appl/opt/SQLite/3.24.0-intel-2018b/lib:/appl/opt/Tcl/8.6.8-GCCcore-7.3.0/lib:/appl/opt/libreadline/7.0-intel-2018b/lib:/appl/opt/ncurses/6.1-intel-2018b/lib:/appl/opt/zlib/1.2.11-GCCcore-7.3.0/lib:/appl/opt/bzip2/1.0.6-GCCcore-7.3.0/lib:/appl/opt/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64:/appl/opt/imkl/2018.3.222-iimpi-2018b/lib/intel64:/appl/opt/impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30/lib64:/appl/opt/ifort/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/tbb/lib/intel64/gcc4.4:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/binutils/2.30-GCCcore-7.3.0/lib:/appl/opt/GCCcore/7.3.0/lib/gcc/x86_64-pc-linux-gnu/7.3.0:/appl/opt/GCCcore/7.3.0/lib64:/appl/opt/GCCcore/7.3.0/lib
+2020-03-07 01:50:03.848042: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Using TensorFlow backend.
+Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex.
+Checking whether there is an H2O instance running at http://localhost:54321 ..... not found.
+Attempting to start a local H2O server...
+  Java Version: java version "1.8.0_144"; Java(TM) SE Runtime Environment (build 1.8.0_144-b01); Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+  Starting server from /wrk/users/thalvari/AutoML_comparison/venv/lib/python3.7/site-packages/h2o/backend/bin/h2o.jar
+  Ice root: /wrk/users/thalvari/tmpkjneknre
+  JVM stdout: /wrk/users/thalvari/tmpkjneknre/h2o_thalvari_started_from_python.out
+  JVM stderr: /wrk/users/thalvari/tmpkjneknre/h2o_thalvari_started_from_python.err
+  Server is running at http://127.0.0.1:54321
+Connecting to H2O server at http://127.0.0.1:54321 ... successful.
+--------------------------  ------------------------------------------------------------------
+H2O cluster uptime:         02 secs
+H2O cluster timezone:       Europe/Helsinki
+H2O data parsing timezone:  UTC
+H2O cluster version:        3.28.0.3
+H2O cluster version age:    1 month and 1 day
+H2O cluster name:           #731318
+H2O cluster total nodes:    1
+H2O cluster free memory:    47.92 Gb
+H2O cluster total cores:    40
+H2O cluster allowed cores:  40
+H2O cluster status:         accepting new members, healthy
+H2O connection url:         http://127.0.0.1:54321
+H2O connection proxy:       {'http': None, 'https': None}
+H2O internal security:      False
+H2O API Extensions:         Amazon S3, XGBoost, Algos, AutoML, Core V3, TargetEncoder, Core V4
+Python version:             3.7.0 final
+--------------------------  ------------------------------------------------------------------
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+AutoML progress: |
+01:50:19.566: Project: AutoML_20200307_15019562
+01:50:19.569: Setting stopping tolerance adaptively based on the training frame: 0.027246843806239894
+01:50:19.569: Build control seed: 42
+01:50:19.570: training frame: Frame key: automl_training_py_1_sid_946f    cols: 65    rows: 1347  chunks: 1    size: 72252  checksum: -22448622031875
+01:50:19.570: validation frame: NULL
+01:50:19.570: leaderboard frame: NULL
+01:50:19.570: blending frame: NULL
+01:50:19.570: response column: C65
+01:50:19.571: fold column: null
+01:50:19.571: weights column: null
+01:50:19.581: Loading execution steps: [{XGBoost : defaults}, {GLM : defaults}, {DRF : [def_1]}, {GBM : defaults}, {DeepLearning : defaults}, {DRF : [XRT]}, {XGBoost : grids}, {GBM : grids}, {DeepLearning : grids}, {StackedEnsemble : defaults}]
+01:50:19.590: AutoML job created: 2020.03.07 01:50:19.562
+01:50:19.592: AutoML build started: 2020.03.07 01:50:19.591
+01:50:19.609: AutoML: starting XGBoost_1_AutoML_20200307_015019 model training
+01:50:19.695: XGBoost_1_AutoML_20200307_015019 [XGBoost def_1] started
+
+███
+01:50:50.702: XGBoost_1_AutoML_20200307_015019 [XGBoost def_1] complete
+01:50:50.733: New leader: XGBoost_1_AutoML_20200307_015019, mean_per_class_error: 0.04501592678194809
+01:50:50.734: AutoML: starting XGBoost_2_AutoML_20200307_015019 model training
+01:50:50.735: XGBoost_2_AutoML_20200307_015019 [XGBoost def_2] started
+
+█
+01:51:04.737: XGBoost_2_AutoML_20200307_015019 [XGBoost def_2] complete
+01:51:04.741: AutoML: starting XGBoost_3_AutoML_20200307_015019 model training
+01:51:04.742: XGBoost_3_AutoML_20200307_015019 [XGBoost def_3] started
+
+██
+01:51:21.746: XGBoost_3_AutoML_20200307_015019 [XGBoost def_3] complete
+01:51:21.751: New leader: XGBoost_3_AutoML_20200307_015019, mean_per_class_error: 0.04496246105756389
+01:51:21.757: AutoML: starting GLM_1_AutoML_20200307_015019 model training
+01:51:21.760: GLM_1_AutoML_20200307_015019 [GLM def_1] started
+
+█
+01:51:40.766: GLM_1_AutoML_20200307_015019 [GLM def_1] complete
+01:51:40.771: New leader: GLM_1_AutoML_20200307_015019, mean_per_class_error: 0.03588937814640229
+01:51:40.776: AutoML: starting DRF_1_AutoML_20200307_015019 model training
+01:51:40.779: DRF_1_AutoML_20200307_015019 [DRF def_1] started
+
+█
+01:51:44.780: DRF_1_AutoML_20200307_015019 [DRF def_1] complete
+01:51:44.785: AutoML: starting GBM_1_AutoML_20200307_015019 model training
+01:51:44.787: GBM_1_AutoML_20200307_015019 [GBM def_1] started
+
+█
+01:51:51.789: GBM_1_AutoML_20200307_015019 [GBM def_1] complete
+01:51:51.793: New leader: GBM_1_AutoML_20200307_015019, mean_per_class_error: 0.033910258182750605
+01:51:51.794: AutoML: starting GBM_2_AutoML_20200307_015019 model training
+01:51:51.795: GBM_2_AutoML_20200307_015019 [GBM def_2] started
+
+██
+01:51:59.797: GBM_2_AutoML_20200307_015019 [GBM def_2] complete
+01:51:59.802: AutoML: starting GBM_3_AutoML_20200307_015019 model training
+01:51:59.803: GBM_3_AutoML_20200307_015019 [GBM def_3] started
+
+██
+01:52:06.821: GBM_3_AutoML_20200307_015019 [GBM def_3] complete
+01:52:06.827: AutoML: starting GBM_4_AutoML_20200307_015019 model training
+01:52:06.829: GBM_4_AutoML_20200307_015019 [GBM def_4] started
+
+█
+01:52:14.830: GBM_4_AutoML_20200307_015019 [GBM def_4] complete
+01:52:14.836: AutoML: starting GBM_5_AutoML_20200307_015019 model training
+01:52:14.837: GBM_5_AutoML_20200307_015019 [GBM def_5] started
+
+██
+01:52:20.838: GBM_5_AutoML_20200307_015019 [GBM def_5] complete
+01:52:20.856: AutoML: starting DeepLearning_1_AutoML_20200307_015019 model training
+01:52:20.857: DeepLearning_1_AutoML_20200307_015019 [DeepLearning def_1] started
+
+
+01:52:22.859: DeepLearning_1_AutoML_20200307_015019 [DeepLearning def_1] complete
+01:52:22.863: AutoML: starting XRT_1_AutoML_20200307_015019 model training
+01:52:22.864: XRT_1_AutoML_20200307_015019 [DRF XRT (Extremely Randomized Trees)] started
+
+█
+01:52:25.865: XRT_1_AutoML_20200307_015019 [DRF XRT (Extremely Randomized Trees)] complete
+01:52:25.873: AutoML: starting XGBoost_grid__1_AutoML_20200307_015019 hyperparameter search
+
+█
+01:52:26.759: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search] started
+
+███
+01:52:38.761: Built: 1 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:53:04.771: Built: 2 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:53:22.788: Built: 3 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:53:47.797: Built: 4 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+
+01:53:57.804: Built: 5 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+██
+01:54:20.816: Built: 6 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+
+01:54:38.825: Built: 7 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:54:58.837: Built: 8 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:55:17.854: Built: 9 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:55:30.897: Built: 10 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:55:54.908: Built: 11 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:56:07.923: Built: 12 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+
+01:56:23.934: Built: 13 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+01:56:23.941: New leader: XGBoost_grid__1_AutoML_20200307_015019_model_13, mean_per_class_error: 0.032266971929760926
+
+█
+01:56:36.943: Built: 14 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:57:06.967: Built: 15 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:57:18.985: Built: 16 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:57:32.5: Built: 17 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+
+01:57:48.24: Built: 18 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+
+█
+01:57:50.35: Built: 19 models for search: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search]
+01:57:50.57: XGBoost_grid__1_AutoML_20200307_015019 [XGBoost Grid Search] complete
+01:57:50.58: AutoML: starting GBM_grid__1_AutoML_20200307_015019 hyperparameter search
+01:57:51.877: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search] started
+
+
+01:57:55.877: Built: 1 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:58:04.891: Built: 2 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:58:09.926: Built: 3 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+█
+01:58:20.18: Built: 4 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+01:58:22.37: Built: 5 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:58:27.51: Built: 6 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:58:30.69: Built: 7 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+█
+01:58:40.82: Built: 8 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:58:49.99: Built: 9 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:58:52.114: Built: 10 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+█
+01:58:58.131: Built: 11 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:59:03.146: Built: 12 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:59:10.162: Built: 13 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:59:14.180: Built: 14 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+█
+01:59:20.196: Built: 15 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+01:59:20.211: New leader: GBM_grid__1_AutoML_20200307_015019_model_15, mean_per_class_error: 0.02481946145473373
+
+
+01:59:25.211: Built: 16 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:59:29.228: Built: 17 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+█
+01:59:41.328: Built: 18 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+01:59:55.366: Built: 19 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+█
+02:00:15.389: Built: 20 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+02:00:19.425: Built: 21 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+█
+02:00:25.445: Built: 22 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+02:00:27.472: Built: 23 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+02:00:35.493: Built: 24 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+02:00:37.513: Built: 25 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+█
+02:00:42.534: Built: 26 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+02:00:44.553: Built: 27 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+02:00:52.573: Built: 28 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+02:00:56.612: Built: 29 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+
+02:01:01.634: Built: 30 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+
+█
+02:01:03.653: Built: 31 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+02:01:04.678: Built: 32 models for search: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search]
+02:01:04.702: GBM_grid__1_AutoML_20200307_015019 [GBM Grid Search] complete
+02:01:04.702: AutoML: starting DeepLearning_grid__1_AutoML_20200307_015019 hyperparameter search
+02:01:04.713: DeepLearning_grid__1_AutoML_20200307_015019 [DeepLearning Grid Search] started
+
+
+02:01:20.715: Built: 1 models for search: DeepLearning_grid__1_AutoML_20200307_015019 [DeepLearning Grid Search]
+
+█
+02:01:28.739: Built: 2 models for search: DeepLearning_grid__1_AutoML_20200307_015019 [DeepLearning Grid Search]
+02:01:28.770: New leader: DeepLearning_grid__1_AutoML_20200307_015019_model_2, mean_per_class_error: 0.022540801967403802
+
+█
+02:01:56.775: Built: 3 models for search: DeepLearning_grid__1_AutoML_20200307_015019 [DeepLearning Grid Search]
+
+█
+02:02:04.804: Built: 4 models for search: DeepLearning_grid__1_AutoML_20200307_015019 [DeepLearning Grid Search]
+02:02:07.837: Built: 5 models for search: DeepLearning_grid__1_AutoML_20200307_015019 [DeepLearning Grid Search]
+
+
+02:02:09.866: Built: 6 models for search: DeepLearning_grid__1_AutoML_20200307_015019 [DeepLearning Grid Search]
+02:02:09.898: DeepLearning_grid__1_AutoML_20200307_015019 [DeepLearning Grid Search] complete
+02:02:09.898: AutoML: starting DeepLearning_grid__2_AutoML_20200307_015019 hyperparameter search
+02:02:09.905: DeepLearning_grid__2_AutoML_20200307_015019 [DeepLearning Grid Search] started
+
+██
+02:02:52.911: Built: 1 models for search: DeepLearning_grid__2_AutoML_20200307_015019 [DeepLearning Grid Search]
+
+
+02:03:01.946: Built: 2 models for search: DeepLearning_grid__2_AutoML_20200307_015019 [DeepLearning Grid Search]
+
+█
+02:03:16.4: Built: 3 models for search: DeepLearning_grid__2_AutoML_20200307_015019 [DeepLearning Grid Search]
+02:03:16.36: DeepLearning_grid__2_AutoML_20200307_015019 [DeepLearning Grid Search] complete
+02:03:16.36: AutoML: starting DeepLearning_grid__3_AutoML_20200307_015019 hyperparameter search
+02:03:16.42: DeepLearning_grid__3_AutoML_20200307_015019 [DeepLearning Grid Search] started
+
+██
+02:04:00.46: Built: 1 models for search: DeepLearning_grid__3_AutoML_20200307_015019 [DeepLearning Grid Search]
+
+
+02:04:12.96: Built: 2 models for search: DeepLearning_grid__3_AutoML_20200307_015019 [DeepLearning Grid Search]
+
+█
+02:04:30.131: Built: 3 models for search: DeepLearning_grid__3_AutoML_20200307_015019 [DeepLearning Grid Search]
+02:04:30.157: DeepLearning_grid__3_AutoML_20200307_015019 [DeepLearning Grid Search] complete
+02:04:30.160: AutoML: starting StackedEnsemble_BestOfFamily_AutoML_20200307_015019 model training
+02:04:30.161: StackedEnsemble_BestOfFamily_AutoML_20200307_015019 [StackedEnsemble best (built using top model from each algorithm type)] started
+
+█
+02:04:36.169: StackedEnsemble_BestOfFamily_AutoML_20200307_015019 [StackedEnsemble best (built using top model from each algorithm type)] complete
+02:04:36.199: New leader: StackedEnsemble_BestOfFamily_AutoML_20200307_015019, mean_per_class_error: 0.02031808459762761
+02:04:36.201: AutoML: starting StackedEnsemble_AllModels_AutoML_20200307_015019 model training
+02:04:36.201: StackedEnsemble_AllModels_AutoML_20200307_015019 [StackedEnsemble all (built using all AutoML models)] started
+
+█| 100%
+
+02:06:12.417: StackedEnsemble_AllModels_AutoML_20200307_015019 [StackedEnsemble all (built using all AutoML models)] complete
+02:06:12.452: New leader: StackedEnsemble_AllModels_AutoML_20200307_015019, mean_per_class_error: 0.018799796122817396
+02:06:12.453: Actual modeling steps: [{XGBoost : [def_1 (10), def_2 (10), def_3 (10)]}, {GLM : [def_1 (10)]}, {DRF : [def_1 (10)]}, {GBM : [def_1 (10), def_2 (10), def_3 (10), def_4 (10), def_5 (10)]}, {DeepLearning : [def_1 (10)]}, {DRF : [XRT (10)]}, {XGBoost : [grid_1 (100)]}, {GBM : [grid_1 (60)]}, {DeepLearning : [grid_1 (20), grid_2 (20), grid_3 (20)]}, {StackedEnsemble : [best (10), all (10)]}]
+02:06:12.453: AutoML build stopped: 2020.03.07 02:06:12.453
+02:06:12.453: AutoML build done: built 77 models
+02:06:12.453: AutoML duration: 15 min 52.862 sec
+02:06:12.461: Verifying training frame immutability. . .
+02:06:12.461: Training frame was not mutated (as expected).
+
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+H2O session _sid_946f closed.
+Checking whether there is an H2O instance running at http://localhost:54321 ..... not found.
+Attempting to start a local H2O server...
+  Java Version: java version "1.8.0_144"; Java(TM) SE Runtime Environment (build 1.8.0_144-b01); Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+  Starting server from /wrk/users/thalvari/AutoML_comparison/venv/lib/python3.7/site-packages/h2o/backend/bin/h2o.jar
+  Ice root: /wrk/users/thalvari/tmp0rx6pmhr
+  JVM stdout: /wrk/users/thalvari/tmp0rx6pmhr/h2o_thalvari_started_from_python.out
+  JVM stderr: /wrk/users/thalvari/tmp0rx6pmhr/h2o_thalvari_started_from_python.err
+  Server is running at http://127.0.0.1:54323
+Connecting to H2O server at http://127.0.0.1:54323 ... successful.
+--------------------------  ------------------------------------------------------------------
+H2O cluster uptime:         01 secs
+H2O cluster timezone:       Europe/Helsinki
+H2O data parsing timezone:  UTC
+H2O cluster version:        3.28.0.3
+H2O cluster version age:    1 month and 1 day
+H2O cluster name:           #613076
+H2O cluster total nodes:    1
+H2O cluster free memory:    47.92 Gb
+H2O cluster total cores:    40
+H2O cluster allowed cores:  40
+H2O cluster status:         accepting new members, healthy
+H2O connection url:         http://127.0.0.1:54323
+H2O connection proxy:       {'http': None, 'https': None}
+H2O internal security:      False
+H2O API Extensions:         Amazon S3, XGBoost, Algos, AutoML, Core V3, TargetEncoder, Core V4
+Python version:             3.7.0 final
+--------------------------  ------------------------------------------------------------------
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+AutoML progress: |
+02:06:46.55: Project: AutoML_20200307_20646050
+02:06:46.59: Setting stopping tolerance adaptively based on the training frame: 0.027246843806239894
+02:06:46.59: Build control seed: 42
+02:06:46.59: training frame: Frame key: automl_training_py_652_sid_b24f    cols: 65    rows: 1347  chunks: 1    size: 76774  checksum: -10564436649339
+02:06:46.60: validation frame: NULL
+02:06:46.60: leaderboard frame: NULL
+02:06:46.60: blending frame: NULL
+02:06:46.60: response column: C65
+02:06:46.60: fold column: null
+02:06:46.60: weights column: null
+02:06:46.79: Loading execution steps: [{XGBoost : defaults}, {GLM : defaults}, {DRF : [def_1]}, {GBM : defaults}, {DeepLearning : defaults}, {DRF : [XRT]}, {XGBoost : grids}, {GBM : grids}, {DeepLearning : grids}, {StackedEnsemble : defaults}]
+02:06:46.92: AutoML job created: 2020.03.07 02:06:46.50
+02:06:46.93: AutoML build started: 2020.03.07 02:06:46.93
+02:06:46.113: AutoML: starting XGBoost_1_AutoML_20200307_020646 model training
+02:06:46.182: XGBoost_1_AutoML_20200307_020646 [XGBoost def_1] started
+
+████
+02:07:25.54: XGBoost_1_AutoML_20200307_020646 [XGBoost def_1] complete
+02:07:25.94: New leader: XGBoost_1_AutoML_20200307_020646, mean_per_class_error: 0.12302050387489546
+02:07:25.95: AutoML: starting XGBoost_2_AutoML_20200307_020646 model training
+02:07:25.97: XGBoost_2_AutoML_20200307_020646 [XGBoost def_2] started
+
+█
+02:07:47.100: XGBoost_2_AutoML_20200307_020646 [XGBoost def_2] complete
+02:07:47.104: AutoML: starting XGBoost_3_AutoML_20200307_020646 model training
+02:07:47.105: XGBoost_3_AutoML_20200307_020646 [XGBoost def_3] started
+
+█
+02:08:10.108: XGBoost_3_AutoML_20200307_020646 [XGBoost def_3] complete
+02:08:10.113: AutoML: starting GLM_1_AutoML_20200307_020646 model training
+02:08:10.115: GLM_1_AutoML_20200307_020646 [GLM def_1] started
+
+█
+02:08:27.120: GLM_1_AutoML_20200307_020646 [GLM def_1] complete
+02:08:27.130: AutoML: starting DRF_1_AutoML_20200307_020646 model training
+02:08:27.131: DRF_1_AutoML_20200307_020646 [DRF def_1] started
+
+█
+02:08:32.132: DRF_1_AutoML_20200307_020646 [DRF def_1] complete
+02:08:32.138: New leader: DRF_1_AutoML_20200307_020646, mean_per_class_error: 0.11091261522956727
+02:08:32.140: AutoML: starting GBM_1_AutoML_20200307_020646 model training
+02:08:32.140: GBM_1_AutoML_20200307_020646 [GBM def_1] started
+
+█
+02:08:40.143: GBM_1_AutoML_20200307_020646 [GBM def_1] complete
+02:08:40.149: AutoML: starting GBM_2_AutoML_20200307_020646 model training
+02:08:40.150: GBM_2_AutoML_20200307_020646 [GBM def_2] started
+
+██
+02:08:48.157: GBM_2_AutoML_20200307_020646 [GBM def_2] complete
+02:08:48.164: New leader: GBM_2_AutoML_20200307_020646, mean_per_class_error: 0.10514624751945519
+02:08:48.164: AutoML: starting GBM_3_AutoML_20200307_020646 model training
+02:08:48.166: GBM_3_AutoML_20200307_020646 [GBM def_3] started
+
+██
+02:08:59.169: GBM_3_AutoML_20200307_020646 [GBM def_3] complete
+02:08:59.176: New leader: GBM_3_AutoML_20200307_020646, mean_per_class_error: 0.101563053181235
+02:08:59.177: AutoML: starting GBM_4_AutoML_20200307_020646 model training
+02:08:59.178: GBM_4_AutoML_20200307_020646 [GBM def_4] started
+
+██
+02:09:09.181: GBM_4_AutoML_20200307_020646 [GBM def_4] complete
+02:09:09.194: AutoML: starting GBM_5_AutoML_20200307_020646 model training
+02:09:09.197: GBM_5_AutoML_20200307_020646 [GBM def_5] started
+
+
+02:09:15.199: GBM_5_AutoML_20200307_020646 [GBM def_5] complete
+02:09:15.214: AutoML: starting DeepLearning_1_AutoML_20200307_020646 model training
+02:09:15.215: DeepLearning_1_AutoML_20200307_020646 [DeepLearning def_1] started
+
+█
+02:09:17.217: DeepLearning_1_AutoML_20200307_020646 [DeepLearning def_1] complete
+02:09:17.224: AutoML: starting XRT_1_AutoML_20200307_020646 model training
+02:09:17.225: XRT_1_AutoML_20200307_020646 [DRF XRT (Extremely Randomized Trees)] started
+
+█
+02:09:21.226: XRT_1_AutoML_20200307_020646 [DRF XRT (Extremely Randomized Trees)] complete
+02:09:21.235: AutoML: starting XGBoost_grid__1_AutoML_20200307_020646 hyperparameter search
+
+█
+02:09:22.190: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search] started
+
+███
+02:09:43.194: Built: 1 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+█
+02:10:17.213: Built: 2 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+██
+02:10:45.227: Built: 3 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+██
+02:11:32.244: Built: 4 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+█
+02:11:45.251: Built: 5 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+█
+02:12:05.261: Built: 6 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+█
+02:12:28.274: Built: 7 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+█
+02:12:58.293: Built: 8 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+█
+02:13:08.301: Built: 9 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+█
+02:13:22.311: Built: 10 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+██
+02:14:04.327: Built: 11 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+█
+02:14:20.336: Built: 12 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+
+
+02:14:33.344: Built: 13 models for search: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search]
+02:14:33.362: XGBoost_grid__1_AutoML_20200307_020646 [XGBoost Grid Search] complete
+02:14:33.362: AutoML: starting GBM_grid__1_AutoML_20200307_020646 hyperparameter search
+02:14:35.150: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search] started
+02:14:38.150: Built: 1 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+█
+02:14:52.166: Built: 2 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:14:59.179: Built: 3 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+█
+02:15:15.204: Built: 4 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:15:18.215: Built: 5 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+█
+02:15:23.235: Built: 6 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+02:15:25.258: Built: 7 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:15:30.279: Built: 8 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+█
+02:15:43.311: Built: 9 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:15:45.323: Built: 10 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:15:51.337: Built: 11 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:15:58.358: Built: 12 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+█
+02:16:02.378: Built: 13 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:16:07.393: Built: 14 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:16:11.412: Built: 15 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:16:17.433: Built: 16 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+█
+02:16:21.461: Built: 17 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:16:33.478: Built: 18 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+█
+02:16:49.497: Built: 19 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+█
+02:17:12.518: Built: 20 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:17:16.539: Built: 21 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+█
+02:17:25.557: Built: 22 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+02:17:25.574: New leader: GBM_grid__1_AutoML_20200307_020646_model_22, mean_per_class_error: 0.09253288125626688
+
+
+02:17:27.575: Built: 23 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:17:36.9: Built: 24 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+
+
+02:17:39.25: Built: 25 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+02:17:41.45: Built: 27 models for search: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search]
+02:17:41.65: GBM_grid__1_AutoML_20200307_020646 [GBM Grid Search] complete
+02:17:41.66: AutoML: starting DeepLearning_grid__1_AutoML_20200307_020646 hyperparameter search
+02:17:41.77: DeepLearning_grid__1_AutoML_20200307_020646 [DeepLearning Grid Search] started
+
+███
+02:18:30.83: Built: 1 models for search: DeepLearning_grid__1_AutoML_20200307_020646 [DeepLearning Grid Search]
+
+
+02:18:38.107: Built: 2 models for search: DeepLearning_grid__1_AutoML_20200307_020646 [DeepLearning Grid Search]
+
+Failed polling AutoML progress log: HTTP 500 Server Error:
+Server error java.lang.ArrayIndexOutOfBoundsException:
+  Error: 103
+  Request: None
+
+
+02:18:42.156: Built: 3 models for search: DeepLearning_grid__1_AutoML_20200307_020646 [DeepLearning Grid Search]
+
+█
+02:18:45.184: Built: 4 models for search: DeepLearning_grid__1_AutoML_20200307_020646 [DeepLearning Grid Search]
+02:18:45.211: DeepLearning_grid__1_AutoML_20200307_020646 [DeepLearning Grid Search] complete
+02:18:45.211: AutoML: starting DeepLearning_grid__2_AutoML_20200307_020646 hyperparameter search
+02:18:45.218: DeepLearning_grid__2_AutoML_20200307_020646 [DeepLearning Grid Search] started
+
+██
+02:19:28.225: Built: 1 models for search: DeepLearning_grid__2_AutoML_20200307_020646 [DeepLearning Grid Search]
+
+
+02:19:40.262: Built: 2 models for search: DeepLearning_grid__2_AutoML_20200307_020646 [DeepLearning Grid Search]
+
+█
+02:19:51.317: Built: 3 models for search: DeepLearning_grid__2_AutoML_20200307_020646 [DeepLearning Grid Search]
+02:19:51.344: DeepLearning_grid__2_AutoML_20200307_020646 [DeepLearning Grid Search] complete
+02:19:51.345: AutoML: starting DeepLearning_grid__3_AutoML_20200307_020646 hyperparameter search
+02:19:51.351: DeepLearning_grid__3_AutoML_20200307_020646 [DeepLearning Grid Search] started
+
+█
+02:20:31.357: Built: 1 models for search: DeepLearning_grid__3_AutoML_20200307_020646 [DeepLearning Grid Search]
+
+█
+02:20:43.387: Built: 2 models for search: DeepLearning_grid__3_AutoML_20200307_020646 [DeepLearning Grid Search]
+
+█
+02:20:59.414: Built: 3 models for search: DeepLearning_grid__3_AutoML_20200307_020646 [DeepLearning Grid Search]
+02:20:59.429: DeepLearning_grid__3_AutoML_20200307_020646 [DeepLearning Grid Search] complete
+02:20:59.433: AutoML: starting StackedEnsemble_BestOfFamily_AutoML_20200307_020646 model training
+02:20:59.434: StackedEnsemble_BestOfFamily_AutoML_20200307_020646 [StackedEnsemble best (built using top model from each algorithm type)] started
+
+█
+02:21:07.438: StackedEnsemble_BestOfFamily_AutoML_20200307_020646 [StackedEnsemble best (built using top model from each algorithm type)] complete
+02:21:07.466: New leader: StackedEnsemble_BestOfFamily_AutoML_20200307_020646, mean_per_class_error: 0.07288170129493957
+02:21:07.467: AutoML: starting StackedEnsemble_AllModels_AutoML_20200307_020646 model training
+02:21:07.468: StackedEnsemble_AllModels_AutoML_20200307_020646 [StackedEnsemble all (built using all AutoML models)] started
+
+█| 100%
+
+02:22:42.517: StackedEnsemble_AllModels_AutoML_20200307_020646 [StackedEnsemble all (built using all AutoML models)] complete
+02:22:42.546: New leader: StackedEnsemble_AllModels_AutoML_20200307_020646, mean_per_class_error: 0.07200912323700084
+02:22:42.546: Actual modeling steps: [{XGBoost : [def_1 (10), def_2 (10), def_3 (10)]}, {GLM : [def_1 (10)]}, {DRF : [def_1 (10)]}, {GBM : [def_1 (10), def_2 (10), def_3 (10), def_4 (10), def_5 (10)]}, {DeepLearning : [def_1 (10)]}, {DRF : [XRT (10)]}, {XGBoost : [grid_1 (100)]}, {GBM : [grid_1 (60)]}, {DeepLearning : [grid_1 (20), grid_2 (20), grid_3 (20)]}, {StackedEnsemble : [best (10), all (10)]}]
+02:22:42.547: AutoML build stopped: 2020.03.07 02:22:42.546
+02:22:42.547: AutoML build done: built 64 models
+02:22:42.547: AutoML duration: 15 min 56.453 sec
+02:22:42.554: Verifying training frame immutability. . .
+02:22:42.554: Training frame was not mutated (as expected).
+
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+H2O session _sid_b24f closed.
+Checking whether there is an H2O instance running at http://localhost:54321 ..... not found.
+Attempting to start a local H2O server...
+  Java Version: java version "1.8.0_144"; Java(TM) SE Runtime Environment (build 1.8.0_144-b01); Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+  Starting server from /wrk/users/thalvari/AutoML_comparison/venv/lib/python3.7/site-packages/h2o/backend/bin/h2o.jar
+  Ice root: /wrk/users/thalvari/tmpfdyql04u
+  JVM stdout: /wrk/users/thalvari/tmpfdyql04u/h2o_thalvari_started_from_python.out
+  JVM stderr: /wrk/users/thalvari/tmpfdyql04u/h2o_thalvari_started_from_python.err
+  Server is running at http://127.0.0.1:54321
+Connecting to H2O server at http://127.0.0.1:54321 ... successful.
+--------------------------  ------------------------------------------------------------------
+H2O cluster uptime:         01 secs
+H2O cluster timezone:       Europe/Helsinki
+H2O data parsing timezone:  UTC
+H2O cluster version:        3.28.0.3
+H2O cluster version age:    1 month and 1 day
+H2O cluster name:           #207525
+H2O cluster total nodes:    1
+H2O cluster free memory:    47.92 Gb
+H2O cluster total cores:    40
+H2O cluster allowed cores:  40
+H2O cluster status:         accepting new members, healthy
+H2O connection url:         http://127.0.0.1:54321
+H2O connection proxy:       {'http': None, 'https': None}
+H2O internal security:      False
+H2O API Extensions:         Amazon S3, XGBoost, Algos, AutoML, Core V3, TargetEncoder, Core V4
+Python version:             3.7.0 final
+--------------------------  ------------------------------------------------------------------
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+AutoML progress: |
+02:23:16.8: Project: AutoML_20200307_22316004
+02:23:16.11: Setting stopping tolerance adaptively based on the training frame: 0.027246843806239894
+02:23:16.11: Build control seed: 42
+02:23:16.12: training frame: Frame key: automl_training_py_1340_sid_8a11    cols: 65    rows: 1347  chunks: 1    size: 80493  checksum: -4177515878424
+02:23:16.12: validation frame: NULL
+02:23:16.12: leaderboard frame: NULL
+02:23:16.12: blending frame: NULL
+02:23:16.12: response column: C65
+02:23:16.13: fold column: null
+02:23:16.13: weights column: null
+02:23:16.24: Loading execution steps: [{XGBoost : defaults}, {GLM : defaults}, {DRF : [def_1]}, {GBM : defaults}, {DeepLearning : defaults}, {DRF : [XRT]}, {XGBoost : grids}, {GBM : grids}, {DeepLearning : grids}, {StackedEnsemble : defaults}]
+02:23:16.33: AutoML job created: 2020.03.07 02:23:16.4
+02:23:16.34: AutoML build started: 2020.03.07 02:23:16.34
+02:23:16.51: AutoML: starting XGBoost_1_AutoML_20200307_022316 model training
+02:23:16.109: XGBoost_1_AutoML_20200307_022316 [XGBoost def_1] started
+
+████
+02:23:56.944: XGBoost_1_AutoML_20200307_022316 [XGBoost def_1] complete
+02:23:56.990: New leader: XGBoost_1_AutoML_20200307_022316, mean_per_class_error: 0.16590621553168136
+02:23:56.991: AutoML: starting XGBoost_2_AutoML_20200307_022316 model training
+02:23:56.992: XGBoost_2_AutoML_20200307_022316 [XGBoost def_2] started
+
+█
+02:24:21.997: XGBoost_2_AutoML_20200307_022316 [XGBoost def_2] complete
+02:24:22.1: AutoML: starting XGBoost_3_AutoML_20200307_022316 model training
+02:24:22.2: XGBoost_3_AutoML_20200307_022316 [XGBoost def_3] started
+
+██
+02:24:44.5: XGBoost_3_AutoML_20200307_022316 [XGBoost def_3] complete
+02:24:44.15: AutoML: starting GLM_1_AutoML_20200307_022316 model training
+02:24:44.18: GLM_1_AutoML_20200307_022316 [GLM def_1] started
+
+
+02:24:57.23: GLM_1_AutoML_20200307_022316 [GLM def_1] complete
+02:24:57.31: AutoML: starting DRF_1_AutoML_20200307_022316 model training
+02:24:57.33: DRF_1_AutoML_20200307_022316 [DRF def_1] started
+
+█
+02:25:02.34: DRF_1_AutoML_20200307_022316 [DRF def_1] complete
+02:25:02.38: AutoML: starting GBM_1_AutoML_20200307_022316 model training
+02:25:02.39: GBM_1_AutoML_20200307_022316 [GBM def_1] started
+
+█
+02:25:10.50: GBM_1_AutoML_20200307_022316 [GBM def_1] complete
+02:25:10.55: AutoML: starting GBM_2_AutoML_20200307_022316 model training
+02:25:10.55: GBM_2_AutoML_20200307_022316 [GBM def_2] started
+
+██
+02:25:18.57: GBM_2_AutoML_20200307_022316 [GBM def_2] complete
+02:25:18.63: New leader: GBM_2_AutoML_20200307_022316, mean_per_class_error: 0.15749207458708994
+02:25:18.63: AutoML: starting GBM_3_AutoML_20200307_022316 model training
+02:25:18.64: GBM_3_AutoML_20200307_022316 [GBM def_3] started
+
+██
+02:25:27.67: GBM_3_AutoML_20200307_022316 [GBM def_3] complete
+02:25:27.74: AutoML: starting GBM_4_AutoML_20200307_022316 model training
+02:25:27.76: GBM_4_AutoML_20200307_022316 [GBM def_4] started
+
+█
+02:25:36.78: GBM_4_AutoML_20200307_022316 [GBM def_4] complete
+02:25:36.84: New leader: GBM_4_AutoML_20200307_022316, mean_per_class_error: 0.14869579959313933
+02:25:36.85: AutoML: starting GBM_5_AutoML_20200307_022316 model training
+02:25:36.87: GBM_5_AutoML_20200307_022316 [GBM def_5] started
+
+█
+02:25:42.90: GBM_5_AutoML_20200307_022316 [GBM def_5] complete
+02:25:42.107: AutoML: starting DeepLearning_1_AutoML_20200307_022316 model training
+02:25:42.108: DeepLearning_1_AutoML_20200307_022316 [DeepLearning def_1] started
+
+█
+02:25:44.109: DeepLearning_1_AutoML_20200307_022316 [DeepLearning def_1] complete
+02:25:44.117: AutoML: starting XRT_1_AutoML_20200307_022316 model training
+02:25:44.118: XRT_1_AutoML_20200307_022316 [DRF XRT (Extremely Randomized Trees)] started
+
+██
+02:25:49.119: XRT_1_AutoML_20200307_022316 [DRF XRT (Extremely Randomized Trees)] complete
+02:25:49.131: AutoML: starting XGBoost_grid__1_AutoML_20200307_022316 hyperparameter search
+02:25:50.197: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search] started
+
+███
+02:26:13.202: Built: 1 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+
+██
+02:26:54.213: Built: 2 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+
+█
+02:27:25.229: Built: 3 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+
+████
+02:28:30.644: Built: 4 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+
+█
+02:28:51.660: Built: 5 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+
+█
+02:29:15.680: Built: 6 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+
+█
+02:29:35.691: Built: 7 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+
+█
+02:29:59.702: Built: 8 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+
+█
+02:30:11.712: Built: 9 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+
+█
+02:30:31.724: Built: 10 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+
+█
+02:31:00.737: Built: 11 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+02:31:01.745: Built: 12 models for search: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search]
+02:31:01.762: XGBoost_grid__1_AutoML_20200307_022316 [XGBoost Grid Search] complete
+02:31:01.763: AutoML: starting GBM_grid__1_AutoML_20200307_022316 hyperparameter search
+
+
+02:31:03.601: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search] started
+02:31:05.601: Built: 1 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+█
+02:31:22.765: Built: 2 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:31:27.781: Built: 3 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+█
+02:31:49.796: Built: 4 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+█
+02:31:52.809: Built: 5 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:31:57.821: Built: 6 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:32:01.833: Built: 7 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+█
+02:32:11.873: Built: 8 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:32:20.888: Built: 9 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:32:22.904: Built: 10 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+█
+02:32:30.920: Built: 11 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:32:38.467: Built: 12 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:32:45.486: Built: 13 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:32:48.541: Built: 14 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+█
+02:32:53.559: Built: 15 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:32:58.579: Built: 16 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:33:01.595: Built: 17 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+█
+02:33:14.621: Built: 18 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:33:29.640: Built: 19 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+█
+02:33:48.661: Built: 20 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+█
+02:33:54.688: Built: 21 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:34:02.713: Built: 22 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+02:34:02.731: New leader: GBM_grid__1_AutoML_20200307_022316_model_22, mean_per_class_error: 0.14033119477151357
+
+
+02:34:04.732: Built: 23 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+
+
+02:34:09.750: Built: 25 models for search: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search]
+02:34:09.767: GBM_grid__1_AutoML_20200307_022316 [GBM Grid Search] complete
+02:34:09.767: AutoML: starting DeepLearning_grid__1_AutoML_20200307_022316 hyperparameter search
+02:34:09.780: DeepLearning_grid__1_AutoML_20200307_022316 [DeepLearning Grid Search] started
+
+███
+02:34:57.790: Built: 1 models for search: DeepLearning_grid__1_AutoML_20200307_022316 [DeepLearning Grid Search]
+
+█
+02:35:08.839: Built: 2 models for search: DeepLearning_grid__1_AutoML_20200307_022316 [DeepLearning Grid Search]
+02:35:08.891: New leader: DeepLearning_grid__1_AutoML_20200307_022316_model_2, mean_per_class_error: 0.13950657219565782
+
+
+02:35:12.893: Built: 3 models for search: DeepLearning_grid__1_AutoML_20200307_022316 [DeepLearning Grid Search]
+02:35:12.913: DeepLearning_grid__1_AutoML_20200307_022316 [DeepLearning Grid Search] complete
+02:35:12.913: AutoML: starting DeepLearning_grid__2_AutoML_20200307_022316 hyperparameter search
+02:35:12.920: DeepLearning_grid__2_AutoML_20200307_022316 [DeepLearning Grid Search] started
+
+██
+02:35:57.925: Built: 1 models for search: DeepLearning_grid__2_AutoML_20200307_022316 [DeepLearning Grid Search]
+
+
+02:36:08.963: Built: 2 models for search: DeepLearning_grid__2_AutoML_20200307_022316 [DeepLearning Grid Search]
+02:36:09.0: New leader: DeepLearning_grid__2_AutoML_20200307_022316_model_2, mean_per_class_error: 0.1331103550711345
+
+█
+02:36:18.4: Built: 3 models for search: DeepLearning_grid__2_AutoML_20200307_022316 [DeepLearning Grid Search]
+02:36:18.33: DeepLearning_grid__2_AutoML_20200307_022316 [DeepLearning Grid Search] complete
+02:36:18.33: AutoML: starting DeepLearning_grid__3_AutoML_20200307_022316 hyperparameter search
+02:36:18.40: DeepLearning_grid__3_AutoML_20200307_022316 [DeepLearning Grid Search] started
+
+██
+02:36:58.45: Built: 1 models for search: DeepLearning_grid__3_AutoML_20200307_022316 [DeepLearning Grid Search]
+
+
+02:37:11.77: Built: 2 models for search: DeepLearning_grid__3_AutoML_20200307_022316 [DeepLearning Grid Search]
+
+█
+02:37:26.135: Built: 3 models for search: DeepLearning_grid__3_AutoML_20200307_022316 [DeepLearning Grid Search]
+02:37:26.161: DeepLearning_grid__3_AutoML_20200307_022316 [DeepLearning Grid Search] complete
+02:37:26.166: AutoML: starting StackedEnsemble_BestOfFamily_AutoML_20200307_022316 model training
+02:37:26.167: StackedEnsemble_BestOfFamily_AutoML_20200307_022316 [StackedEnsemble best (built using top model from each algorithm type)] started
+
+█
+02:37:37.172: StackedEnsemble_BestOfFamily_AutoML_20200307_022316 [StackedEnsemble best (built using top model from each algorithm type)] complete
+02:37:37.202: New leader: StackedEnsemble_BestOfFamily_AutoML_20200307_022316, mean_per_class_error: 0.11486215691978874
+02:37:37.204: AutoML: starting StackedEnsemble_AllModels_AutoML_20200307_022316 model training
+02:37:37.204: StackedEnsemble_AllModels_AutoML_20200307_022316 [StackedEnsemble all (built using all AutoML models)] started
+
+█| 100%
+
+02:38:55.546: StackedEnsemble_AllModels_AutoML_20200307_022316 [StackedEnsemble all (built using all AutoML models)] complete
+02:38:55.577: Actual modeling steps: [{XGBoost : [def_1 (10), def_2 (10), def_3 (10)]}, {GLM : [def_1 (10)]}, {DRF : [def_1 (10)]}, {GBM : [def_1 (10), def_2 (10), def_3 (10), def_4 (10), def_5 (10)]}, {DeepLearning : [def_1 (10)]}, {DRF : [XRT (10)]}, {XGBoost : [grid_1 (100)]}, {GBM : [grid_1 (60)]}, {DeepLearning : [grid_1 (20), grid_2 (20), grid_3 (20)]}, {StackedEnsemble : [best (10), all (10)]}]
+02:38:55.578: AutoML build stopped: 2020.03.07 02:38:55.577
+02:38:55.578: AutoML build done: built 60 models
+02:38:55.578: AutoML duration: 15 min 39.543 sec
+02:38:55.585: Verifying training frame immutability. . .
+02:38:55.585: Training frame was not mutated (as expected).
+
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+H2O session _sid_8a11 closed.
+Checking whether there is an H2O instance running at http://localhost:54321 ..... not found.
+Attempting to start a local H2O server...
+  Java Version: java version "1.8.0_144"; Java(TM) SE Runtime Environment (build 1.8.0_144-b01); Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+  Starting server from /wrk/users/thalvari/AutoML_comparison/venv/lib/python3.7/site-packages/h2o/backend/bin/h2o.jar
+  Ice root: /wrk/users/thalvari/tmp1m921ukr
+  JVM stdout: /wrk/users/thalvari/tmp1m921ukr/h2o_thalvari_started_from_python.out
+  JVM stderr: /wrk/users/thalvari/tmp1m921ukr/h2o_thalvari_started_from_python.err
+  Server is running at http://127.0.0.1:54323
+Connecting to H2O server at http://127.0.0.1:54323 ... successful.
+--------------------------  ------------------------------------------------------------------
+H2O cluster uptime:         01 secs
+H2O cluster timezone:       Europe/Helsinki
+H2O data parsing timezone:  UTC
+H2O cluster version:        3.28.0.3
+H2O cluster version age:    1 month and 1 day
+H2O cluster name:           #497626
+H2O cluster total nodes:    1
+H2O cluster free memory:    47.92 Gb
+H2O cluster total cores:    40
+H2O cluster allowed cores:  40
+H2O cluster status:         accepting new members, healthy
+H2O connection url:         http://127.0.0.1:54323
+H2O connection proxy:       {'http': None, 'https': None}
+H2O internal security:      False
+H2O API Extensions:         Amazon S3, XGBoost, Algos, AutoML, Core V3, TargetEncoder, Core V4
+Python version:             3.7.0 final
+--------------------------  ------------------------------------------------------------------
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+AutoML progress: |
+02:39:07.46: Project: AutoML_20200307_23907043
+02:39:07.49: Setting stopping tolerance adaptively based on the training frame: 0.027246843806239894
+02:39:07.50: Build control seed: 42
+02:39:07.50: training frame: Frame key: automl_training_py_2027_sid_9831    cols: 65    rows: 1347  chunks: 1    size: 81567  checksum: -4584584224602
+02:39:07.50: validation frame: NULL
+02:39:07.51: leaderboard frame: NULL
+02:39:07.51: blending frame: NULL
+02:39:07.51: response column: C65
+02:39:07.51: fold column: null
+02:39:07.51: weights column: null
+02:39:07.61: Loading execution steps: [{XGBoost : defaults}, {GLM : defaults}, {DRF : [def_1]}, {GBM : defaults}, {DeepLearning : defaults}, {DRF : [XRT]}, {XGBoost : grids}, {GBM : grids}, {DeepLearning : grids}, {StackedEnsemble : defaults}]
+02:39:07.70: AutoML job created: 2020.03.07 02:39:07.43
+02:39:07.71: AutoML build started: 2020.03.07 02:39:07.70
+02:39:07.89: AutoML: starting XGBoost_1_AutoML_20200307_023907 model training
+02:39:07.170: XGBoost_1_AutoML_20200307_023907 [XGBoost def_1] started
+
+████
+02:39:49.564: XGBoost_1_AutoML_20200307_023907 [XGBoost def_1] complete
+02:39:49.599: New leader: XGBoost_1_AutoML_20200307_023907, mean_per_class_error: 0.21136221480241515
+02:39:49.600: AutoML: starting XGBoost_2_AutoML_20200307_023907 model training
+02:39:49.600: XGBoost_2_AutoML_20200307_023907 [XGBoost def_2] started
+
+█
+02:40:11.609: XGBoost_2_AutoML_20200307_023907 [XGBoost def_2] complete
+02:40:11.613: AutoML: starting XGBoost_3_AutoML_20200307_023907 model training
+02:40:11.613: XGBoost_3_AutoML_20200307_023907 [XGBoost def_3] started
+
+██
+02:40:37.621: XGBoost_3_AutoML_20200307_023907 [XGBoost def_3] complete
+02:40:37.627: AutoML: starting GLM_1_AutoML_20200307_023907 model training
+02:40:37.628: GLM_1_AutoML_20200307_023907 [GLM def_1] started
+
+
+02:40:48.631: GLM_1_AutoML_20200307_023907 [GLM def_1] complete
+02:40:48.640: AutoML: starting DRF_1_AutoML_20200307_023907 model training
+02:40:48.642: DRF_1_AutoML_20200307_023907 [DRF def_1] started
+
+█
+02:40:54.645: DRF_1_AutoML_20200307_023907 [DRF def_1] complete
+02:40:54.651: AutoML: starting GBM_1_AutoML_20200307_023907 model training
+02:40:54.651: GBM_1_AutoML_20200307_023907 [GBM def_1] started
+
+██
+02:41:03.654: GBM_1_AutoML_20200307_023907 [GBM def_1] complete
+02:41:03.660: AutoML: starting GBM_2_AutoML_20200307_023907 model training
+02:41:03.660: GBM_2_AutoML_20200307_023907 [GBM def_2] started
+
+█
+02:41:09.664: GBM_2_AutoML_20200307_023907 [GBM def_2] complete
+02:41:09.670: AutoML: starting GBM_3_AutoML_20200307_023907 model training
+02:41:09.671: GBM_3_AutoML_20200307_023907 [GBM def_3] started
+
+█
+02:41:17.687: GBM_3_AutoML_20200307_023907 [GBM def_3] complete
+02:41:17.693: AutoML: starting GBM_4_AutoML_20200307_023907 model training
+02:41:17.695: GBM_4_AutoML_20200307_023907 [GBM def_4] started
+
+██
+02:41:25.713: GBM_4_AutoML_20200307_023907 [GBM def_4] complete
+02:41:25.721: AutoML: starting GBM_5_AutoML_20200307_023907 model training
+02:41:25.722: GBM_5_AutoML_20200307_023907 [GBM def_5] started
+
+█
+02:41:32.723: GBM_5_AutoML_20200307_023907 [GBM def_5] complete
+02:41:32.740: AutoML: starting DeepLearning_1_AutoML_20200307_023907 model training
+02:41:32.741: DeepLearning_1_AutoML_20200307_023907 [DeepLearning def_1] started
+
+█
+02:41:34.742: DeepLearning_1_AutoML_20200307_023907 [DeepLearning def_1] complete
+02:41:34.749: AutoML: starting XRT_1_AutoML_20200307_023907 model training
+02:41:34.750: XRT_1_AutoML_20200307_023907 [DRF XRT (Extremely Randomized Trees)] started
+
+██
+02:41:39.751: XRT_1_AutoML_20200307_023907 [DRF XRT (Extremely Randomized Trees)] complete
+02:41:39.764: AutoML: starting XGBoost_grid__1_AutoML_20200307_023907 hyperparameter search
+02:41:40.715: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search] started
+
+███
+02:42:02.718: Built: 1 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+██
+02:42:38.729: Built: 2 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+█
+02:43:00.739: Built: 3 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+██
+02:43:56.755: Built: 4 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+█
+02:44:13.764: Built: 5 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+███
+02:45:04.859: Built: 6 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+█
+02:45:23.867: Built: 7 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+█
+02:45:44.877: Built: 8 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+
+02:45:51.885: Built: 9 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+█
+02:46:10.896: Built: 10 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+██
+02:46:44.930: Built: 11 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+
+
+02:46:52.939: Built: 12 models for search: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search]
+02:46:52.956: XGBoost_grid__1_AutoML_20200307_023907 [XGBoost Grid Search] complete
+02:46:52.956: AutoML: starting GBM_grid__1_AutoML_20200307_023907 hyperparameter search
+02:46:54.745: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search] started
+02:46:57.746: Built: 1 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+█
+02:47:07.765: Built: 2 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:47:13.782: Built: 3 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+█
+02:47:29.797: Built: 4 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:47:32.808: Built: 5 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:47:38.820: Built: 6 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+█
+02:47:41.838: Built: 7 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:47:50.852: Built: 8 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+█
+02:48:03.871: Built: 9 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:48:05.889: Built: 10 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:48:13.904: Built: 11 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:48:18.918: Built: 12 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+█
+02:48:24.959: Built: 13 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:48:27.970: Built: 14 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:48:32.986: Built: 15 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+02:48:33.0: New leader: GBM_grid__1_AutoML_20200307_023907_model_15, mean_per_class_error: 0.1976745785455882
+
+
+02:48:37.1: Built: 16 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:48:41.18: Built: 17 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+█
+02:48:49.39: Built: 18 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+█
+02:49:04.63: Built: 19 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+█
+02:49:26.101: Built: 20 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:49:31.121: Built: 21 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:49:37.139: Built: 22 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+02:49:39.156: Built: 23 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+█
+02:49:45.180: Built: 24 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:49:47.198: Built: 25 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:49:53.536: Built: 26 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:49:56.554: Built: 27 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+
+02:49:59.632: Built: 28 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+02:50:00.721: Built: 29 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+
+█
+02:50:01.742: Built: 30 models for search: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search]
+02:50:01.765: GBM_grid__1_AutoML_20200307_023907 [GBM Grid Search] complete
+02:50:01.766: AutoML: starting DeepLearning_grid__1_AutoML_20200307_023907 hyperparameter search
+02:50:01.778: DeepLearning_grid__1_AutoML_20200307_023907 [DeepLearning Grid Search] started
+
+██
+02:50:47.783: Built: 1 models for search: DeepLearning_grid__1_AutoML_20200307_023907 [DeepLearning Grid Search]
+
+
+02:50:55.831: Built: 2 models for search: DeepLearning_grid__1_AutoML_20200307_023907 [DeepLearning Grid Search]
+02:50:55.866: New leader: DeepLearning_grid__1_AutoML_20200307_023907_model_2, mean_per_class_error: 0.1828850544100004
+
+█
+02:51:01.866: Built: 3 models for search: DeepLearning_grid__1_AutoML_20200307_023907 [DeepLearning Grid Search]
+
+
+02:51:04.892: Built: 4 models for search: DeepLearning_grid__1_AutoML_20200307_023907 [DeepLearning Grid Search]
+02:51:04.919: DeepLearning_grid__1_AutoML_20200307_023907 [DeepLearning Grid Search] complete
+02:51:04.920: AutoML: starting DeepLearning_grid__2_AutoML_20200307_023907 hyperparameter search
+02:51:04.927: DeepLearning_grid__2_AutoML_20200307_023907 [DeepLearning Grid Search] started
+
+██
+02:51:51.932: Built: 1 models for search: DeepLearning_grid__2_AutoML_20200307_023907 [DeepLearning Grid Search]
+
+
+02:52:01.959: Built: 2 models for search: DeepLearning_grid__2_AutoML_20200307_023907 [DeepLearning Grid Search]
+02:52:02.11: New leader: DeepLearning_grid__2_AutoML_20200307_023907_model_2, mean_per_class_error: 0.16236452942424115
+
+█
+02:52:11.14: Built: 3 models for search: DeepLearning_grid__2_AutoML_20200307_023907 [DeepLearning Grid Search]
+02:52:11.38: DeepLearning_grid__2_AutoML_20200307_023907 [DeepLearning Grid Search] complete
+02:52:11.39: AutoML: starting DeepLearning_grid__3_AutoML_20200307_023907 hyperparameter search
+02:52:11.47: DeepLearning_grid__3_AutoML_20200307_023907 [DeepLearning Grid Search] started
+
+██
+02:52:54.53: Built: 1 models for search: DeepLearning_grid__3_AutoML_20200307_023907 [DeepLearning Grid Search]
+
+
+02:53:04.108: Built: 2 models for search: DeepLearning_grid__3_AutoML_20200307_023907 [DeepLearning Grid Search]
+
+█
+02:53:20.157: Built: 3 models for search: DeepLearning_grid__3_AutoML_20200307_023907 [DeepLearning Grid Search]
+02:53:20.191: DeepLearning_grid__3_AutoML_20200307_023907 [DeepLearning Grid Search] complete
+02:53:20.195: AutoML: starting StackedEnsemble_BestOfFamily_AutoML_20200307_023907 model training
+02:53:20.196: StackedEnsemble_BestOfFamily_AutoML_20200307_023907 [StackedEnsemble best (built using top model from each algorithm type)] started
+
+█
+02:53:31.206: StackedEnsemble_BestOfFamily_AutoML_20200307_023907 [StackedEnsemble best (built using top model from each algorithm type)] complete
+02:53:31.234: New leader: StackedEnsemble_BestOfFamily_AutoML_20200307_023907, mean_per_class_error: 0.14763024028422025
+02:53:31.236: AutoML: starting StackedEnsemble_AllModels_AutoML_20200307_023907 model training
+02:53:31.236: StackedEnsemble_AllModels_AutoML_20200307_023907 [StackedEnsemble all (built using all AutoML models)] started
+
+█| 100%
+
+02:54:44.356: StackedEnsemble_AllModels_AutoML_20200307_023907 [StackedEnsemble all (built using all AutoML models)] complete
+02:54:44.390: Actual modeling steps: [{XGBoost : [def_1 (10), def_2 (10), def_3 (10)]}, {GLM : [def_1 (10)]}, {DRF : [def_1 (10)]}, {GBM : [def_1 (10), def_2 (10), def_3 (10), def_4 (10), def_5 (10)]}, {DeepLearning : [def_1 (10)]}, {DRF : [XRT (10)]}, {XGBoost : [grid_1 (100)]}, {GBM : [grid_1 (60)]}, {DeepLearning : [grid_1 (20), grid_2 (20), grid_3 (20)]}, {StackedEnsemble : [best (10), all (10)]}]
+02:54:44.390: AutoML build stopped: 2020.03.07 02:54:44.390
+02:54:44.390: AutoML build done: built 66 models
+02:54:44.390: AutoML duration: 15 min 37.320 sec
+02:54:44.439: Verifying training frame immutability. . .
+02:54:44.439: Training frame was not mutated (as expected).
+
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+H2O session _sid_9831 closed.
+Checking whether there is an H2O instance running at http://localhost:54321 ..... not found.
+Attempting to start a local H2O server...
+  Java Version: java version "1.8.0_144"; Java(TM) SE Runtime Environment (build 1.8.0_144-b01); Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+  Starting server from /wrk/users/thalvari/AutoML_comparison/venv/lib/python3.7/site-packages/h2o/backend/bin/h2o.jar
+  Ice root: /wrk/users/thalvari/tmpgop32q83
+  JVM stdout: /wrk/users/thalvari/tmpgop32q83/h2o_thalvari_started_from_python.out
+  JVM stderr: /wrk/users/thalvari/tmpgop32q83/h2o_thalvari_started_from_python.err
+  Server is running at http://127.0.0.1:54321
+Connecting to H2O server at http://127.0.0.1:54321 ... successful.
+--------------------------  ------------------------------------------------------------------
+H2O cluster uptime:         01 secs
+H2O cluster timezone:       Europe/Helsinki
+H2O data parsing timezone:  UTC
+H2O cluster version:        3.28.0.3
+H2O cluster version age:    1 month and 1 day
+H2O cluster name:           #79539
+H2O cluster total nodes:    1
+H2O cluster free memory:    47.92 Gb
+H2O cluster total cores:    40
+H2O cluster allowed cores:  40
+H2O cluster status:         accepting new members, healthy
+H2O connection url:         http://127.0.0.1:54321
+H2O connection proxy:       {'http': None, 'https': None}
+H2O internal security:      False
+H2O API Extensions:         Amazon S3, XGBoost, Algos, AutoML, Core V3, TargetEncoder, Core V4
+Python version:             3.7.0 final
+--------------------------  ------------------------------------------------------------------
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+AutoML progress: |
+02:54:56.719: Project: AutoML_20200307_25456716
+02:54:56.722: Setting stopping tolerance adaptively based on the training frame: 0.027246843806239894
+02:54:56.722: Build control seed: 42
+02:54:56.723: training frame: Frame key: automl_training_py_2717_sid_9397    cols: 65    rows: 1347  chunks: 1    size: 80959  checksum: -11869449876792
+02:54:56.723: validation frame: NULL
+02:54:56.723: leaderboard frame: NULL
+02:54:56.723: blending frame: NULL
+02:54:56.723: response column: C65
+02:54:56.723: fold column: null
+02:54:56.723: weights column: null
+02:54:56.733: Loading execution steps: [{XGBoost : defaults}, {GLM : defaults}, {DRF : [def_1]}, {GBM : defaults}, {DeepLearning : defaults}, {DRF : [XRT]}, {XGBoost : grids}, {GBM : grids}, {DeepLearning : grids}, {StackedEnsemble : defaults}]
+02:54:56.742: AutoML job created: 2020.03.07 02:54:56.716
+02:54:56.743: AutoML build started: 2020.03.07 02:54:56.743
+02:54:56.759: AutoML: starting XGBoost_1_AutoML_20200307_025456 model training
+02:54:56.819: XGBoost_1_AutoML_20200307_025456 [XGBoost def_1] started
+
+████
+02:55:36.254: XGBoost_1_AutoML_20200307_025456 [XGBoost def_1] complete
+02:55:36.288: New leader: XGBoost_1_AutoML_20200307_025456, mean_per_class_error: 0.2957840886956285
+02:55:36.288: AutoML: starting XGBoost_2_AutoML_20200307_025456 model training
+02:55:36.289: XGBoost_2_AutoML_20200307_025456 [XGBoost def_2] started
+
+█
+02:55:59.292: XGBoost_2_AutoML_20200307_025456 [XGBoost def_2] complete
+02:55:59.296: AutoML: starting XGBoost_3_AutoML_20200307_025456 model training
+02:55:59.298: XGBoost_3_AutoML_20200307_025456 [XGBoost def_3] started
+
+█
+02:56:22.302: XGBoost_3_AutoML_20200307_025456 [XGBoost def_3] complete
+02:56:22.311: AutoML: starting GLM_1_AutoML_20200307_025456 model training
+02:56:22.313: GLM_1_AutoML_20200307_025456 [GLM def_1] started
+
+█
+02:56:33.319: GLM_1_AutoML_20200307_025456 [GLM def_1] complete
+02:56:33.328: AutoML: starting DRF_1_AutoML_20200307_025456 model training
+02:56:33.330: DRF_1_AutoML_20200307_025456 [DRF def_1] started
+
+█
+02:56:39.333: DRF_1_AutoML_20200307_025456 [DRF def_1] complete
+02:56:39.339: AutoML: starting GBM_1_AutoML_20200307_025456 model training
+02:56:39.340: GBM_1_AutoML_20200307_025456 [GBM def_1] started
+
+█
+02:56:46.342: GBM_1_AutoML_20200307_025456 [GBM def_1] complete
+02:56:46.347: AutoML: starting GBM_2_AutoML_20200307_025456 model training
+02:56:46.348: GBM_2_AutoML_20200307_025456 [GBM def_2] started
+
+██
+02:56:53.349: GBM_2_AutoML_20200307_025456 [GBM def_2] complete
+02:56:53.354: New leader: GBM_2_AutoML_20200307_025456, mean_per_class_error: 0.2911755714367528
+02:56:53.354: AutoML: starting GBM_3_AutoML_20200307_025456 model training
+02:56:53.355: GBM_3_AutoML_20200307_025456 [GBM def_3] started
+
+██
+02:57:01.358: GBM_3_AutoML_20200307_025456 [GBM def_3] complete
+02:57:01.364: AutoML: starting GBM_4_AutoML_20200307_025456 model training
+02:57:01.366: GBM_4_AutoML_20200307_025456 [GBM def_4] started
+
+█
+02:57:10.369: GBM_4_AutoML_20200307_025456 [GBM def_4] complete
+02:57:10.372: New leader: GBM_4_AutoML_20200307_025456, mean_per_class_error: 0.283546578056144
+02:57:10.373: AutoML: starting GBM_5_AutoML_20200307_025456 model training
+02:57:10.373: GBM_5_AutoML_20200307_025456 [GBM def_5] started
+
+█
+02:57:15.374: GBM_5_AutoML_20200307_025456 [GBM def_5] complete
+02:57:15.389: AutoML: starting DeepLearning_1_AutoML_20200307_025456 model training
+02:57:15.390: DeepLearning_1_AutoML_20200307_025456 [DeepLearning def_1] started
+
+
+02:57:17.392: DeepLearning_1_AutoML_20200307_025456 [DeepLearning def_1] complete
+02:57:17.399: AutoML: starting XRT_1_AutoML_20200307_025456 model training
+02:57:17.399: XRT_1_AutoML_20200307_025456 [DRF XRT (Extremely Randomized Trees)] started
+
+██
+02:57:22.436: XRT_1_AutoML_20200307_025456 [DRF XRT (Extremely Randomized Trees)] complete
+02:57:22.446: AutoML: starting XGBoost_grid__1_AutoML_20200307_025456 hyperparameter search
+
+██
+02:57:23.471: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search] started
+
+█
+02:57:42.474: Built: 1 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+██
+02:58:20.484: Built: 2 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+██
+02:58:43.493: Built: 3 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+██
+02:59:41.618: Built: 4 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+█
+02:59:58.628: Built: 5 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+██
+03:00:32.644: Built: 6 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+█
+03:00:54.668: Built: 7 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+██
+03:01:28.681: Built: 8 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+
+03:01:34.688: Built: 9 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+█
+03:01:48.698: Built: 10 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+█
+03:02:23.718: Built: 11 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+█
+03:02:37.733: Built: 12 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+
+
+03:02:38.751: Built: 13 models for search: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search]
+03:02:38.767: XGBoost_grid__1_AutoML_20200307_025456 [XGBoost Grid Search] complete
+03:02:38.768: AutoML: starting GBM_grid__1_AutoML_20200307_025456 hyperparameter search
+03:02:40.495: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search] started
+03:02:43.496: Built: 1 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+█
+03:02:55.580: Built: 2 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:03:02.590: Built: 3 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+█
+03:03:19.605: Built: 4 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:03:22.631: Built: 5 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:03:26.657: Built: 6 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+█
+03:03:29.669: Built: 7 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:03:34.694: Built: 8 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:03:46.750: Built: 9 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+03:03:48.763: Built: 10 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+█
+03:03:54.777: Built: 11 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:03:59.820: Built: 12 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:04:06.863: Built: 13 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+█
+03:04:09.891: Built: 14 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:04:16.910: Built: 15 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+03:04:16.924: New leader: GBM_grid__1_AutoML_20200307_025456_model_15, mean_per_class_error: 0.27988569868542645
+
+
+03:04:20.925: Built: 16 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:04:24.939: Built: 17 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+█
+03:04:33.6: Built: 18 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:04:44.43: Built: 19 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+█
+03:05:07.74: Built: 20 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+█
+03:05:12.93: Built: 21 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:05:19.121: Built: 22 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:05:21.159: Built: 23 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:05:26.184: Built: 24 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:05:29.213: Built: 25 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+█
+03:05:34.232: Built: 26 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+03:05:35.250: Built: 27 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:05:42.279: Built: 28 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+
+03:05:46.298: Built: 29 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+03:05:48.318: Built: 30 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+
+█
+03:05:49.340: Built: 31 models for search: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search]
+03:05:49.362: GBM_grid__1_AutoML_20200307_025456 [GBM Grid Search] complete
+03:05:49.363: AutoML: starting DeepLearning_grid__1_AutoML_20200307_025456 hyperparameter search
+03:05:49.376: DeepLearning_grid__1_AutoML_20200307_025456 [DeepLearning Grid Search] started
+
+██
+03:06:36.381: Built: 1 models for search: DeepLearning_grid__1_AutoML_20200307_025456 [DeepLearning Grid Search]
+
+
+03:06:46.419: Built: 2 models for search: DeepLearning_grid__1_AutoML_20200307_025456 [DeepLearning Grid Search]
+03:06:46.459: New leader: DeepLearning_grid__1_AutoML_20200307_025456_model_2, mean_per_class_error: 0.24756853191632802
+
+
+03:06:50.460: Built: 3 models for search: DeepLearning_grid__1_AutoML_20200307_025456 [DeepLearning Grid Search]
+
+█
+03:06:53.510: Built: 4 models for search: DeepLearning_grid__1_AutoML_20200307_025456 [DeepLearning Grid Search]
+03:06:53.532: DeepLearning_grid__1_AutoML_20200307_025456 [DeepLearning Grid Search] complete
+03:06:53.533: AutoML: starting DeepLearning_grid__2_AutoML_20200307_025456 hyperparameter search
+03:06:53.539: DeepLearning_grid__2_AutoML_20200307_025456 [DeepLearning Grid Search] started
+
+██
+03:07:38.622: Built: 1 models for search: DeepLearning_grid__2_AutoML_20200307_025456 [DeepLearning Grid Search]
+
+
+03:07:49.668: Built: 2 models for search: DeepLearning_grid__2_AutoML_20200307_025456 [DeepLearning Grid Search]
+03:07:49.704: New leader: DeepLearning_grid__2_AutoML_20200307_025456_model_2, mean_per_class_error: 0.20924690140275035
+
+█
+03:07:57.706: Built: 3 models for search: DeepLearning_grid__2_AutoML_20200307_025456 [DeepLearning Grid Search]
+03:07:57.730: DeepLearning_grid__2_AutoML_20200307_025456 [DeepLearning Grid Search] complete
+03:07:57.730: AutoML: starting DeepLearning_grid__3_AutoML_20200307_025456 hyperparameter search
+03:07:57.736: DeepLearning_grid__3_AutoML_20200307_025456 [DeepLearning Grid Search] started
+
+█
+03:08:38.740: Built: 1 models for search: DeepLearning_grid__3_AutoML_20200307_025456 [DeepLearning Grid Search]
+
+█
+03:08:50.771: Built: 2 models for search: DeepLearning_grid__3_AutoML_20200307_025456 [DeepLearning Grid Search]
+
+█
+03:09:05.832: Built: 3 models for search: DeepLearning_grid__3_AutoML_20200307_025456 [DeepLearning Grid Search]
+03:09:05.865: DeepLearning_grid__3_AutoML_20200307_025456 [DeepLearning Grid Search] complete
+03:09:05.869: AutoML: starting StackedEnsemble_BestOfFamily_AutoML_20200307_025456 model training
+03:09:05.870: StackedEnsemble_BestOfFamily_AutoML_20200307_025456 [StackedEnsemble best (built using top model from each algorithm type)] started
+
+█
+03:09:18.884: StackedEnsemble_BestOfFamily_AutoML_20200307_025456 [StackedEnsemble best (built using top model from each algorithm type)] complete
+03:09:18.914: New leader: StackedEnsemble_BestOfFamily_AutoML_20200307_025456, mean_per_class_error: 0.19031701036788598
+03:09:18.916: AutoML: starting StackedEnsemble_AllModels_AutoML_20200307_025456 model training
+03:09:18.916: StackedEnsemble_AllModels_AutoML_20200307_025456 [StackedEnsemble all (built using all AutoML models)] started
+
+█| 100%
+
+03:11:03.100: StackedEnsemble_AllModels_AutoML_20200307_025456 [StackedEnsemble all (built using all AutoML models)] complete
+03:11:03.131: Actual modeling steps: [{XGBoost : [def_1 (10), def_2 (10), def_3 (10)]}, {GLM : [def_1 (10)]}, {DRF : [def_1 (10)]}, {GBM : [def_1 (10), def_2 (10), def_3 (10), def_4 (10), def_5 (10)]}, {DeepLearning : [def_1 (10)]}, {DRF : [XRT (10)]}, {XGBoost : [grid_1 (100)]}, {GBM : [grid_1 (60)]}, {DeepLearning : [grid_1 (20), grid_2 (20), grid_3 (20)]}, {StackedEnsemble : [best (10), all (10)]}]
+03:11:03.132: AutoML build stopped: 2020.03.07 03:11:03.131
+03:11:03.132: AutoML build done: built 68 models
+03:11:03.132: AutoML duration: 16 min  6.388 sec
+03:11:03.139: Verifying training frame immutability. . .
+03:11:03.139: Training frame was not mutated (as expected).
+
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+H2O session _sid_9397 closed.
+Checking whether there is an H2O instance running at http://localhost:54321 ..... not found.
+Attempting to start a local H2O server...
+  Java Version: java version "1.8.0_144"; Java(TM) SE Runtime Environment (build 1.8.0_144-b01); Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+  Starting server from /wrk/users/thalvari/AutoML_comparison/venv/lib/python3.7/site-packages/h2o/backend/bin/h2o.jar
+  Ice root: /wrk/users/thalvari/tmpkxt7_j_s
+  JVM stdout: /wrk/users/thalvari/tmpkxt7_j_s/h2o_thalvari_started_from_python.out
+  JVM stderr: /wrk/users/thalvari/tmpkxt7_j_s/h2o_thalvari_started_from_python.err
+  Server is running at http://127.0.0.1:54323
+Connecting to H2O server at http://127.0.0.1:54323 ... successful.
+--------------------------  ------------------------------------------------------------------
+H2O cluster uptime:         01 secs
+H2O cluster timezone:       Europe/Helsinki
+H2O data parsing timezone:  UTC
+H2O cluster version:        3.28.0.3
+H2O cluster version age:    1 month and 1 day
+H2O cluster name:           #559497
+H2O cluster total nodes:    1
+H2O cluster free memory:    47.92 Gb
+H2O cluster total cores:    40
+H2O cluster allowed cores:  40
+H2O cluster status:         accepting new members, healthy
+H2O connection url:         http://127.0.0.1:54323
+H2O connection proxy:       {'http': None, 'https': None}
+H2O internal security:      False
+H2O API Extensions:         Amazon S3, XGBoost, Algos, AutoML, Core V3, TargetEncoder, Core V4
+Python version:             3.7.0 final
+--------------------------  ------------------------------------------------------------------
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+AutoML progress: |
+03:11:14.800: Project: AutoML_20200307_31114797
+03:11:14.803: Setting stopping tolerance adaptively based on the training frame: 0.027246843806239894
+03:11:14.804: Build control seed: 42
+03:11:14.804: training frame: Frame key: automl_training_py_3399_sid_82ac    cols: 65    rows: 1347  chunks: 1    size: 81307  checksum: -21257808973938
+03:11:14.804: validation frame: NULL
+03:11:14.804: leaderboard frame: NULL
+03:11:14.804: blending frame: NULL
+03:11:14.805: response column: C65
+03:11:14.805: fold column: null
+03:11:14.805: weights column: null
+03:11:14.816: Loading execution steps: [{XGBoost : defaults}, {GLM : defaults}, {DRF : [def_1]}, {GBM : defaults}, {DeepLearning : defaults}, {DRF : [XRT]}, {XGBoost : grids}, {GBM : grids}, {DeepLearning : grids}, {StackedEnsemble : defaults}]
+03:11:14.826: AutoML job created: 2020.03.07 03:11:14.797
+03:11:14.827: AutoML build started: 2020.03.07 03:11:14.827
+03:11:14.845: AutoML: starting XGBoost_1_AutoML_20200307_031114 model training
+03:11:14.933: XGBoost_1_AutoML_20200307_031114 [XGBoost def_1] started
+
+████
+03:11:58.51: XGBoost_1_AutoML_20200307_031114 [XGBoost def_1] complete
+03:11:58.81: New leader: XGBoost_1_AutoML_20200307_031114, mean_per_class_error: 0.33458426195591356
+03:11:58.81: AutoML: starting XGBoost_2_AutoML_20200307_031114 model training
+03:11:58.82: XGBoost_2_AutoML_20200307_031114 [XGBoost def_2] started
+
+█
+03:12:16.85: XGBoost_2_AutoML_20200307_031114 [XGBoost def_2] complete
+03:12:16.89: AutoML: starting XGBoost_3_AutoML_20200307_031114 model training
+03:12:16.90: XGBoost_3_AutoML_20200307_031114 [XGBoost def_3] started
+
+█
+03:12:40.96: XGBoost_3_AutoML_20200307_031114 [XGBoost def_3] complete
+03:12:40.104: AutoML: starting GLM_1_AutoML_20200307_031114 model training
+03:12:40.107: GLM_1_AutoML_20200307_031114 [GLM def_1] started
+
+█
+03:12:51.110: GLM_1_AutoML_20200307_031114 [GLM def_1] complete
+03:12:51.118: AutoML: starting DRF_1_AutoML_20200307_031114 model training
+03:12:51.119: DRF_1_AutoML_20200307_031114 [DRF def_1] started
+
+█
+03:12:57.121: DRF_1_AutoML_20200307_031114 [DRF def_1] complete
+03:12:57.125: New leader: DRF_1_AutoML_20200307_031114, mean_per_class_error: 0.32582952772101603
+03:12:57.128: AutoML: starting GBM_1_AutoML_20200307_031114 model training
+03:12:57.130: GBM_1_AutoML_20200307_031114 [GBM def_1] started
+
+█
+03:13:03.132: GBM_1_AutoML_20200307_031114 [GBM def_1] complete
+03:13:03.139: AutoML: starting GBM_2_AutoML_20200307_031114 model training
+03:13:03.139: GBM_2_AutoML_20200307_031114 [GBM def_2] started
+
+██
+03:13:11.141: GBM_2_AutoML_20200307_031114 [GBM def_2] complete
+03:13:11.147: New leader: GBM_2_AutoML_20200307_031114, mean_per_class_error: 0.3139970171309038
+03:13:11.148: AutoML: starting GBM_3_AutoML_20200307_031114 model training
+03:13:11.149: GBM_3_AutoML_20200307_031114 [GBM def_3] started
+
+██
+03:13:20.152: GBM_3_AutoML_20200307_031114 [GBM def_3] complete
+03:13:20.158: New leader: GBM_3_AutoML_20200307_031114, mean_per_class_error: 0.30051328298516455
+03:13:20.159: AutoML: starting GBM_4_AutoML_20200307_031114 model training
+03:13:20.161: GBM_4_AutoML_20200307_031114 [GBM def_4] started
+
+██
+03:13:29.163: GBM_4_AutoML_20200307_031114 [GBM def_4] complete
+03:13:29.170: AutoML: starting GBM_5_AutoML_20200307_031114 model training
+03:13:29.171: GBM_5_AutoML_20200307_031114 [GBM def_5] started
+
+
+03:13:34.172: GBM_5_AutoML_20200307_031114 [GBM def_5] complete
+03:13:34.190: AutoML: starting DeepLearning_1_AutoML_20200307_031114 model training
+03:13:34.192: DeepLearning_1_AutoML_20200307_031114 [DeepLearning def_1] started
+
+█
+03:13:36.193: DeepLearning_1_AutoML_20200307_031114 [DeepLearning def_1] complete
+03:13:36.203: AutoML: starting XRT_1_AutoML_20200307_031114 model training
+03:13:36.204: XRT_1_AutoML_20200307_031114 [DRF XRT (Extremely Randomized Trees)] started
+
+██
+03:13:41.206: XRT_1_AutoML_20200307_031114 [DRF XRT (Extremely Randomized Trees)] complete
+03:13:41.216: AutoML: starting XGBoost_grid__1_AutoML_20200307_031114 hyperparameter search
+
+█
+03:13:42.177: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search] started
+
+██
+03:13:59.180: Built: 1 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+█
+03:14:26.225: Built: 2 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+█
+03:14:49.233: Built: 3 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+██
+03:15:33.265: Built: 4 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+█
+03:15:47.280: Built: 5 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+██
+03:16:14.290: Built: 6 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+
+03:16:29.299: Built: 7 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+██
+03:17:04.446: Built: 8 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+
+03:17:10.455: Built: 9 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+█
+03:17:21.470: Built: 10 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+█
+03:17:55.491: Built: 11 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+█
+03:18:13.508: Built: 12 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+██
+03:18:50.535: Built: 13 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+
+03:18:56.544: Built: 14 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+
+█
+03:18:57.560: Built: 15 models for search: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search]
+03:18:57.574: XGBoost_grid__1_AutoML_20200307_031114 [XGBoost Grid Search] complete
+03:18:57.575: AutoML: starting GBM_grid__1_AutoML_20200307_031114 hyperparameter search
+03:18:59.439: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search] started
+03:19:01.439: Built: 1 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:19:16.473: Built: 2 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:19:20.484: Built: 3 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+█
+03:19:35.499: Built: 4 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:19:38.516: Built: 5 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+█
+03:19:44.541: Built: 6 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+03:19:47.552: Built: 7 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:19:53.579: Built: 8 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+█
+03:20:03.594: Built: 9 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:20:05.610: Built: 10 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:20:11.633: Built: 11 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:20:16.647: Built: 12 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:20:20.700: Built: 13 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:20:23.714: Built: 14 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+█
+03:20:28.733: Built: 15 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:20:32.750: Built: 16 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:20:36.776: Built: 17 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+█
+03:20:45.796: Built: 18 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:20:57.829: Built: 19 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+█
+03:21:14.858: Built: 20 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:21:19.892: Built: 21 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+█
+03:21:27.925: Built: 22 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+03:21:27.941: New leader: GBM_grid__1_AutoML_20200307_031114_model_22, mean_per_class_error: 0.2952501498789142
+
+
+03:21:29.942: Built: 23 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:21:34.999: Built: 24 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:21:38.16: Built: 25 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:21:43.52: Built: 26 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+03:21:44.66: Built: 27 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+█
+03:21:50.89: Built: 28 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:21:54.111: Built: 29 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:22:00.132: Built: 30 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+
+03:22:02.149: Built: 31 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+
+█
+03:22:05.176: Built: 32 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+03:22:07.200: Built: 34 models for search: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search]
+03:22:07.225: GBM_grid__1_AutoML_20200307_031114 [GBM Grid Search] complete
+03:22:07.225: AutoML: starting DeepLearning_grid__1_AutoML_20200307_031114 hyperparameter search
+03:22:07.238: DeepLearning_grid__1_AutoML_20200307_031114 [DeepLearning Grid Search] started
+
+██
+03:22:55.244: Built: 1 models for search: DeepLearning_grid__1_AutoML_20200307_031114 [DeepLearning Grid Search]
+
+
+03:23:05.286: Built: 2 models for search: DeepLearning_grid__1_AutoML_20200307_031114 [DeepLearning Grid Search]
+03:23:05.327: New leader: DeepLearning_grid__1_AutoML_20200307_031114_model_2, mean_per_class_error: 0.2763641818297128
+
+█
+03:23:09.328: Built: 3 models for search: DeepLearning_grid__1_AutoML_20200307_031114 [DeepLearning Grid Search]
+
+
+03:23:12.358: Built: 4 models for search: DeepLearning_grid__1_AutoML_20200307_031114 [DeepLearning Grid Search]
+03:23:12.390: DeepLearning_grid__1_AutoML_20200307_031114 [DeepLearning Grid Search] complete
+03:23:12.391: AutoML: starting DeepLearning_grid__2_AutoML_20200307_031114 hyperparameter search
+03:23:12.398: DeepLearning_grid__2_AutoML_20200307_031114 [DeepLearning Grid Search] started
+
+██
+03:23:56.405: Built: 1 models for search: DeepLearning_grid__2_AutoML_20200307_031114 [DeepLearning Grid Search]
+
+
+03:24:07.453: Built: 2 models for search: DeepLearning_grid__2_AutoML_20200307_031114 [DeepLearning Grid Search]
+03:24:07.510: New leader: DeepLearning_grid__2_AutoML_20200307_031114_model_2, mean_per_class_error: 0.252061125328498
+
+█
+03:24:16.513: Built: 3 models for search: DeepLearning_grid__2_AutoML_20200307_031114 [DeepLearning Grid Search]
+03:24:16.545: DeepLearning_grid__2_AutoML_20200307_031114 [DeepLearning Grid Search] complete
+03:24:16.545: AutoML: starting DeepLearning_grid__3_AutoML_20200307_031114 hyperparameter search
+03:24:16.551: DeepLearning_grid__3_AutoML_20200307_031114 [DeepLearning Grid Search] started
+
+██
+03:24:58.603: Built: 1 models for search: DeepLearning_grid__3_AutoML_20200307_031114 [DeepLearning Grid Search]
+
+
+03:25:09.637: Built: 2 models for search: DeepLearning_grid__3_AutoML_20200307_031114 [DeepLearning Grid Search]
+
+█
+03:25:24.677: Built: 3 models for search: DeepLearning_grid__3_AutoML_20200307_031114 [DeepLearning Grid Search]
+03:25:24.704: DeepLearning_grid__3_AutoML_20200307_031114 [DeepLearning Grid Search] complete
+03:25:24.708: AutoML: starting StackedEnsemble_BestOfFamily_AutoML_20200307_031114 model training
+03:25:24.709: StackedEnsemble_BestOfFamily_AutoML_20200307_031114 [StackedEnsemble best (built using top model from each algorithm type)] started
+
+█
+03:25:36.730: StackedEnsemble_BestOfFamily_AutoML_20200307_031114 [StackedEnsemble best (built using top model from each algorithm type)] complete
+03:25:36.761: New leader: StackedEnsemble_BestOfFamily_AutoML_20200307_031114, mean_per_class_error: 0.2231276229965152
+03:25:36.763: AutoML: starting StackedEnsemble_AllModels_AutoML_20200307_031114 model training
+03:25:36.764: StackedEnsemble_AllModels_AutoML_20200307_031114 [StackedEnsemble all (built using all AutoML models)] started
+
+█| 100%
+
+03:27:17.159: StackedEnsemble_AllModels_AutoML_20200307_031114 [StackedEnsemble all (built using all AutoML models)] complete
+03:27:17.188: Actual modeling steps: [{XGBoost : [def_1 (10), def_2 (10), def_3 (10)]}, {GLM : [def_1 (10)]}, {DRF : [def_1 (10)]}, {GBM : [def_1 (10), def_2 (10), def_3 (10), def_4 (10), def_5 (10)]}, {DeepLearning : [def_1 (10)]}, {DRF : [XRT (10)]}, {XGBoost : [grid_1 (100)]}, {GBM : [grid_1 (60)]}, {DeepLearning : [grid_1 (20), grid_2 (20), grid_3 (20)]}, {StackedEnsemble : [best (10), all (10)]}]
+03:27:17.188: AutoML build stopped: 2020.03.07 03:27:17.188
+03:27:17.188: AutoML build done: built 73 models
+03:27:17.189: AutoML duration: 16 min  2.361 sec
+03:27:17.195: Verifying training frame immutability. . .
+03:27:17.195: Training frame was not mutated (as expected).
+
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+Parse progress: |█████████████████████████████████████████████████████████| 100%
+stackedensemble prediction progress: |████████████████████████████████████| 100%
+H2O session _sid_82ac closed.
+   model_name  train_max_angle  test_max_angle  accuracy
+0         h2o              0.0             0.0     0.987
+1         h2o              0.0            36.0     0.720
+2         h2o              0.0            72.0     0.427
+3         h2o              0.0           108.0     0.338
+4         h2o              0.0           144.0     0.262
+5         h2o              0.0           180.0     0.280
+6         h2o             36.0             0.0     0.969
+7         h2o             36.0            36.0     0.947
+8         h2o             36.0            72.0     0.720
+9         h2o             36.0           108.0     0.551
+10        h2o             36.0           144.0     0.484
+11        h2o             36.0           180.0     0.467
+12        h2o             72.0             0.0     0.953
+13        h2o             72.0            36.0     0.938
+14        h2o             72.0            72.0     0.916
+15        h2o             72.0           108.0     0.773
+16        h2o             72.0           144.0     0.680
+17        h2o             72.0           180.0     0.593
+18        h2o            108.0             0.0     0.933
+19        h2o            108.0            36.0     0.902
+20        h2o            108.0            72.0     0.918
+21        h2o            108.0           108.0     0.891
+22        h2o            108.0           144.0     0.789
+23        h2o            108.0           180.0     0.691
+24        h2o            144.0             0.0     0.918
+25        h2o            144.0            36.0     0.902
+26        h2o            144.0            72.0     0.869
+27        h2o            144.0           108.0     0.882
+28        h2o            144.0           144.0     0.851
+29        h2o            144.0           180.0     0.771
+30        h2o            180.0             0.0     0.853
+31        h2o            180.0            36.0     0.842
+32        h2o            180.0            72.0     0.831
+33        h2o            180.0           108.0     0.827
+34        h2o            180.0           144.0     0.809
+35        h2o            180.0           180.0     0.820

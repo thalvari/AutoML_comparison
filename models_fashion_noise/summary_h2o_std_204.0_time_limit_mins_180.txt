@@ -1,0 +1,10 @@
+Actual train time: 3:02:12
+
+model_id:
+StackedEnsemble_BestOfFamily_AutoML_20200307_042033
+
+base_models:
+GLM_1_AutoML_20200307_042033
+XGBoost_1_AutoML_20200307_042033
+GBM_1_AutoML_20200307_042033
+DRF_1_AutoML_20200307_042033

@@ -1,0 +1,13 @@
+Actual train time: 11:19:26
+
+Steps:
+0. OneHotEncoder(categorical_features=[False, False, False, False, False, False,
+                                    False, False, False, False, False, False,
+                                    False, False, False, False, False, False,
+                                    False, False, False, False, False, False,
+                                    False, False, False, False, False, False, ...],
+              dtype=<class 'float'>, minimum_fraction=0.2, sparse=False,
+              threshold=10)
+1. KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=None, n_neighbors=20, p=2,
+                     weights='distance')
