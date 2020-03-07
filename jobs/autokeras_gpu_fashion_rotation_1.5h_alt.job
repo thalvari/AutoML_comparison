@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
+#SBATCH -o autokeras_gpu_fashion_rotation_1.5h_alt.txt
+#SBATCH -c 8
+#SBATCH --mem=50G
+#SBATCH -p gpu
+#SBATCH --gres=gpu:1
+#SBATCH --constraint=v100
+#SBATCH -t 7-00:00:00
+
+srun python run.py autokeras fashion rotation 90 8 50 --gpu

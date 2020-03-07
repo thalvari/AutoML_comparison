@@ -17,6 +17,10 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 import torch
+
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
+
 from PIL import Image
 from autokeras.utils import pickle_from_file
 from h2o.automl import H2OAutoML
@@ -28,10 +32,7 @@ from sklearn.model_selection import train_test_split
 from tpot import TPOTClassifier
 
 seed = 42
-rn.seed(seed)
 np.random.seed(seed)
-tf.random.set_seed(seed)
-torch.manual_seed(seed)
 random_state = RandomState(seed)
 
 
@@ -131,6 +132,9 @@ class AbstractModel(ABC):
         self.data_params_dict = data_params_dict
         self.n_threads = n_threads
         self.mem_size_gb = mem_size_gb
+        np.random.seed(seed)
+        tf.random.set_seed(seed)
+        torch.manual_seed(seed)
 
     def prepare(self, x_train, y_train, err_param):
         model_description = f"{self.model_full_name}_{self.err_param_name}_{np.round(err_param, 3)}_" \
