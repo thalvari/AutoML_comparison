@@ -1,0 +1,6 @@
+Actual train time: 0:48:18
+
+model_id:
+DeepLearning_grid__3_AutoML_20200306_180235_model_7
+
+base_models:

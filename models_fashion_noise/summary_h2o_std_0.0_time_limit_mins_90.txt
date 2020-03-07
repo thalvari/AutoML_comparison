@@ -1,0 +1,6 @@
+Actual train time: 1:31:21
+
+model_id:
+XGBoost_1_AutoML_20200307_003405
+
+base_models:

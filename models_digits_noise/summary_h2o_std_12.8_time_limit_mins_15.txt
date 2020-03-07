@@ -1,0 +1,6 @@
+Actual train time: 0:13:51
+
+model_id:
+GLM_1_AutoML_20200306_140416
+
+base_models:

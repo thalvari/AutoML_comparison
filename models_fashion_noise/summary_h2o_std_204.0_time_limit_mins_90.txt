@@ -1,0 +1,8 @@
+Actual train time: 1:30:34
+
+model_id:
+StackedEnsemble_AllModels_AutoML_20200306_210442
+
+base_models:
+XGBoost_1_AutoML_20200306_210442
+XGBoost_2_AutoML_20200306_210442

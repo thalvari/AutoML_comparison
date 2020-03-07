@@ -1,0 +1,8 @@
+Actual train time: 3:03:15
+
+Steps:
+0. MinMaxScaler(copy=True, feature_range=(0, 1))
+1. LinearSVC(C=20.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+          multi_class='ovr', penalty='l2', random_state=42, tol=1e-05,
+          verbose=0)
