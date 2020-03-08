@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH -J aml
+#SBATCH --workdir=/wrk/users/thalvari/AutoML_comparison/
+#SBATCH -o autokeras_fashion_rotation_3h.txt
+#SBATCH -c 40
+#SBATCH --mem=100G
+#SBATCH -t 1-00:00:00
+
+srun python test.py autokeras fashion rotation 180 40 100
