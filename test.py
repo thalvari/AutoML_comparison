@@ -18,8 +18,8 @@ import pandas as pd
 import tensorflow as tf
 import torch
 
-torch.backends.cudnn.deterministic = True
-torch.backends.cudnn.benchmark = False
+# torch.backends.cudnn.deterministic = True
+# torch.backends.cudnn.benchmark = False
 
 from PIL import Image
 from autokeras.utils import pickle_from_file
