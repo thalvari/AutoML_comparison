@@ -190,7 +190,7 @@ class AutoKerasModel(AbstractModel):
     def fit(self, x_train, y_train):
         self.model = ak.ImageClassifier(augment=self.augment, path=mkdtemp(dir="temp"), verbose=True)
         image_hw = self.data_params_dict["image_hw"]
-        x_train = x_train.reshape((len(x_train), image_hw, image_hw, 1))
+        x_train = x_train.reshape((1, len(x_train), image_hw, image_hw))
         time_start = time.time()
         try:
             self.model.fit(x_train, y_train, time_limit=60 * self.time_limit_mins)
