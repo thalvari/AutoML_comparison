@@ -192,7 +192,7 @@ class AutoKerasModel(AbstractModel):
         image_hw = self.data_params_dict["image_hw"]
         x_train = x_train.reshape((len(x_train), image_hw, image_hw, 1))
         time_start = time.time()
-        self.model.fit(x_train, y_train, time_limit=45)
+        self.model.fit(x_train, y_train, time_limit=120)
         self.time_train = timedelta(seconds=np.round(time.time() - time_start))
 
     def load(self, model_path_prefix):
