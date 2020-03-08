@@ -195,7 +195,7 @@ class AutoKerasModel(AbstractModel):
         try:
             self.model.fit(x_train, y_train, time_limit=60 * self.time_limit_mins)
         except:
-            pass
+            print("ERROR")
         self.time_train = timedelta(seconds=np.round(time.time() - time_start))
 
     def load(self, model_path_prefix):
