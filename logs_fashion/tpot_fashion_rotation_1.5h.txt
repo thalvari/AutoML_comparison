@@ -1,0 +1,201 @@
+2020-03-04 15:40:02.098084: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/opt/Java/11.0.2/lib:/appl/opt/cuDNN/7.5.0.56-CUDA-10.0.130/lib64:/appl/opt/CUDA/10.0.130/nvvm/lib64:/appl/opt/CUDA/10.0.130/extras/CUPTI/lib64:/appl/opt/CUDA/10.0.130/lib64:/appl/opt/Python/3.7.0-intel-2018b/lib/python3.7/site-packages/numpy-1.14.5-py3.7-linux-x86_64.egg/numpy/core/lib:/appl/opt/Python/3.7.0-intel-2018b/lib:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib64:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib:/appl/opt/GMP/6.1.2-GCCcore-7.3.0/lib:/appl/opt/XZ/5.2.4-GCCcore-7.3.0/lib:/appl/opt/SQLite/3.24.0-intel-2018b/lib:/appl/opt/Tcl/8.6.8-GCCcore-7.3.0/lib:/appl/opt/libreadline/7.0-intel-2018b/lib:/appl/opt/ncurses/6.1-intel-2018b/lib:/appl/opt/zlib/1.2.11-GCCcore-7.3.0/lib:/appl/opt/bzip2/1.0.6-GCCcore-7.3.0/lib:/appl/opt/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64:/appl/opt/imkl/2018.3.222-iimpi-2018b/lib/intel64:/appl/opt/impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30/lib64:/appl/opt/ifort/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/tbb/lib/intel64/gcc4.4:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/binutils/2.30-GCCcore-7.3.0/lib:/appl/opt/GCCcore/7.3.0/lib/gcc/x86_64-pc-linux-gnu/7.3.0:/appl/opt/GCCcore/7.3.0/lib64:/appl/opt/GCCcore/7.3.0/lib
+2020-03-04 15:40:02.098333: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/opt/Java/11.0.2/lib:/appl/opt/cuDNN/7.5.0.56-CUDA-10.0.130/lib64:/appl/opt/CUDA/10.0.130/nvvm/lib64:/appl/opt/CUDA/10.0.130/extras/CUPTI/lib64:/appl/opt/CUDA/10.0.130/lib64:/appl/opt/Python/3.7.0-intel-2018b/lib/python3.7/site-packages/numpy-1.14.5-py3.7-linux-x86_64.egg/numpy/core/lib:/appl/opt/Python/3.7.0-intel-2018b/lib:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib64:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib:/appl/opt/GMP/6.1.2-GCCcore-7.3.0/lib:/appl/opt/XZ/5.2.4-GCCcore-7.3.0/lib:/appl/opt/SQLite/3.24.0-intel-2018b/lib:/appl/opt/Tcl/8.6.8-GCCcore-7.3.0/lib:/appl/opt/libreadline/7.0-intel-2018b/lib:/appl/opt/ncurses/6.1-intel-2018b/lib:/appl/opt/zlib/1.2.11-GCCcore-7.3.0/lib:/appl/opt/bzip2/1.0.6-GCCcore-7.3.0/lib:/appl/opt/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64:/appl/opt/imkl/2018.3.222-iimpi-2018b/lib/intel64:/appl/opt/impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30/lib64:/appl/opt/ifort/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/tbb/lib/intel64/gcc4.4:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/binutils/2.30-GCCcore-7.3.0/lib:/appl/opt/GCCcore/7.3.0/lib/gcc/x86_64-pc-linux-gnu/7.3.0:/appl/opt/GCCcore/7.3.0/lib64:/appl/opt/GCCcore/7.3.0/lib
+2020-03-04 15:40:02.098348: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Using TensorFlow backend.
+Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex.
+GPU count: 0
+31 operators have been imported by TPOT.
+Skipped pipeline #11 due to time out. Continuing to the next pipeline.
+Skipped pipeline #13 due to time out. Continuing to the next pipeline.
+Skipped pipeline #17 due to time out. Continuing to the next pipeline.
+Skipped pipeline #21 due to time out. Continuing to the next pipeline.
+Skipped pipeline #25 due to time out. Continuing to the next pipeline.
+Optimization Progress:   0%|          | 0/100 [00:00<?, ?pipeline/s]Optimization Progress:   5%|▌         | 5/100 [1:31:16<28:54:17, 1095.34s/pipeline]                                                                                   Optimization Progress:  11%|█         | 11/100 [1:31:16<27:04:45, 1095.34s/pipeline]                                                                                    Optimization Progress:  13%|█▎        | 13/100 [1:31:16<26:28:14, 1095.34s/pipeline]                                                                                    Optimization Progress:  17%|█▋        | 17/100 [1:31:16<25:15:13, 1095.34s/pipeline]                                                                                    Optimization Progress:  21%|██        | 21/100 [1:31:16<24:02:12, 1095.34s/pipeline]                                                                                    Optimization Progress:  25%|██▌       | 25/100 [1:31:16<22:49:10, 1095.34s/pipeSkipped pipeline #27 due to time out. Continuing to the next pipeline.
+Skipped pipeline #31 due to time out. Continuing to the next pipeline.
+Skipped pipeline #33 due to time out. Continuing to the next pipeline.
+Skipped pipeline #35 due to time out. Continuing to the next pipeline.
+Skipped pipeline #40 due to time out. Continuing to the next pipeline.
+Skipped pipeline #43 due to time out. Continuing to the next pipeline.
+line]                                                                                    Optimization Progress:  27%|██▋       | 27/100 [1:31:16<22:12:40, 1095.34s/pipeline]                                                                                    Optimization Progress:  31%|███       | 31/100 [1:31:16<20:59:38, 1095.34s/pipeline]                                                                                    Optimization Progress:  33%|███▎      | 33/100 [1:31:16<20:23:07, 1095.34s/pipeline]                                                                                    Optimization Progress:  35%|███▌      | 35/100 [1:31:16<19:46:37, 1095.34s/pipeline]                                                                                    Optimization Progress:  40%|████      | 40/100 [1:31:16<18:15:20, 1095.34s/pipeline]                                                                                    Optimization Progress:  43%|████�Skipped pipeline #48 due to time out. Continuing to the next pipeline.
+Skipped pipeline #59 due to time out. Continuing to the next pipeline.
+Skipped pipeline #67 due to time out. Continuing to the next pipeline.
+Skipped pipeline #74 due to time out. Continuing to the next pipeline.
+Skipped pipeline #76 due to time out. Continuing to the next pipeline.
+��     | 43/100 [1:31:16<17:20:34, 1095.34s/pipeline]                                                                                    Optimization Progress:  48%|████▊     | 48/100 [1:31:16<15:49:17, 1095.34s/pipeline]                                                                                    Optimization Progress:  59%|█████▉    | 59/100 [1:31:16<12:28:29, 1095.34s/pipeline]                                                                                    Optimization Progress:  67%|██████▋   | 67/100 [1:31:16<10:02:26, 1095.34s/pipeline]                                                                                    Optimization Progress:  74%|███████▍  | 74/100 [1:31:16<7:54:38, 1095.34s/pipeline]                                                                                   Optimization Progress:  76%|███████▌  | 76/100 [1:31:16<7:18:08, 1095.34s/pipeline]                                                  Skipped pipeline #79 due to time out. Continuing to the next pipeline.
+
+91.63 minutes have elapsed. TPOT will close down.
+TPOT closed during evaluation in one generation.
+WARNING: TPOT may not provide a good pipeline if TPOT is stopped/interrupted in a early generation.
+
+
+TPOT closed prematurely. Will use the current best pipeline.
+31 operators have been imported by TPOT.
+Skipped pipeline #11 due to time out. Continuing to the next pipeline.
+                                 Optimization Progress:  79%|███████▉  | 79/100 [1:31:16<6:23:22, 1095.34s/pipeline]                                                                                   Optimization Progress: 101pipeline [1:31:16, 1095.34s/pipeline]                                                               Optimization Progress: 101pipeline [1:31:16, 1095.34s/pipeline]                                                               Optimization Progress: 101pipeline [1:31:16, 1095.34s/pipeline]                                                               Optimization Progress: 101pipeline [1:31:16, 1095.34s/pipeline]                                                               Optimization Progress:   0%|          | 0/100 [00:00<?, ?pipeline/s]Optimization Progress:   5%|▌         | 5/100 [1:32:33<29:18:29, 1110.62s/pipeline]                                                                                   Optimization Progress:  11%|█         | 11/100Skipped pipeline #13 due to time out. Continuing to the next pipeline.
+Skipped pipeline #17 due to time out. Continuing to the next pipeline.
+Skipped pipeline #21 due to time out. Continuing to the next pipeline.
+Skipped pipeline #25 due to time out. Continuing to the next pipeline.
+Skipped pipeline #27 due to time out. Continuing to the next pipeline.
+Skipped pipeline #31 due to time out. Continuing to the next pipeline.
+ [1:32:33<27:27:25, 1110.62s/pipeline]                                                                                    Optimization Progress:  13%|█▎        | 13/100 [1:32:33<26:50:24, 1110.62s/pipeline]                                                                                    Optimization Progress:  17%|█▋        | 17/100 [1:32:33<25:36:21, 1110.62s/pipeline]                                                                                    Optimization Progress:  21%|██        | 21/100 [1:32:33<24:22:19, 1110.62s/pipeline]                                                                                    Optimization Progress:  25%|██▌       | 25/100 [1:32:33<23:08:16, 1110.62s/pipeline]                                                                                    Optimization Progress:  27%|██▋       | 27/100 [1:32:33<22:31:15, 1110.62s/pipeline]                                                                                    Optimization ProgresSkipped pipeline #33 due to time out. Continuing to the next pipeline.
+Skipped pipeline #35 due to time out. Continuing to the next pipeline.
+Skipped pipeline #40 due to time out. Continuing to the next pipeline.
+Skipped pipeline #43 due to time out. Continuing to the next pipeline.
+Skipped pipeline #48 due to time out. Continuing to the next pipeline.
+s:  31%|███       | 31/100 [1:32:33<21:17:12, 1110.62s/pipeline]                                                                                    Optimization Progress:  33%|███▎      | 33/100 [1:32:33<20:40:11, 1110.62s/pipeline]                                                                                    Optimization Progress:  35%|███▌      | 35/100 [1:32:33<20:03:10, 1110.62s/pipeline]                                                                                    Optimization Progress:  40%|████      | 40/100 [1:32:33<18:30:37, 1110.62s/pipeline]                                                                                    Optimization Progress:  43%|████▎     | 43/100 [1:32:33<17:35:05, 1110.62s/pipeline]                                                                                    Optimization Progress:  48%|████▊     | 48/100 [1:32:33<16:02:32, 1110.62s/pipeline]                                                      Skipped pipeline #59 due to time out. Continuing to the next pipeline.
+Skipped pipeline #63 due to time out. Continuing to the next pipeline.
+Skipped pipeline #68 due to time out. Continuing to the next pipeline.
+Skipped pipeline #75 due to time out. Continuing to the next pipeline.
+Skipped pipeline #77 due to time out. Continuing to the next pipeline.
+Skipped pipeline #80 due to time out. Continuing to the next pipeline.
+                              Optimization Progress:  59%|█████▉    | 59/100 [1:32:33<12:38:55, 1110.62s/pipeline]                                                                                    Optimization Progress:  63%|██████▎   | 63/100 [1:32:33<11:24:52, 1110.62s/pipeline]                                                                                    Optimization Progress:  68%|██████▊   | 68/100 [1:32:33<9:52:19, 1110.62s/pipeline]                                                                                   Optimization Progress:  75%|███████▌  | 75/100 [1:32:33<7:42:45, 1110.62s/pipeline]                                                                                   Optimization Progress:  77%|███████▋  | 77/100 [1:32:33<7:05:44, 1110.62s/pipeline]                                                                                   Optimization Progress:  80%|████████  | 80/100 [1:32:33
+92.89 minutes have elapsed. TPOT will close down.
+TPOT closed during evaluation in one generation.
+WARNING: TPOT may not provide a good pipeline if TPOT is stopped/interrupted in a early generation.
+
+
+TPOT closed prematurely. Will use the current best pipeline.
+31 operators have been imported by TPOT.
+Skipped pipeline #11 due to time out. Continuing to the next pipeline.
+<6:10:12, 1110.62s/pipeline]                                                                                   Optimization Progress: 102pipeline [1:32:33, 1110.62s/pipeline]                                                               Optimization Progress: 102pipeline [1:32:33, 1110.62s/pipeline]                                                               Optimization Progress: 102pipeline [1:32:33, 1110.62s/pipeline]                                                               Optimization Progress: 102pipeline [1:32:33, 1110.62s/pipeline]                                                               Optimization Progress:   0%|          | 0/100 [00:00<?, ?pipeline/s]Optimization Progress:   5%|▌         | 5/100 [1:35:23<30:12:26, 1144.70s/pipeline]                                                                                   Optimization Progress:  11%|█         | 11/100 [1:35:23<28:17:58, 1144.70s/pipeline]                                                                   Skipped pipeline #13 due to time out. Continuing to the next pipeline.
+Skipped pipeline #17 due to time out. Continuing to the next pipeline.
+Skipped pipeline #21 due to time out. Continuing to the next pipeline.
+Skipped pipeline #25 due to time out. Continuing to the next pipeline.
+Skipped pipeline #27 due to time out. Continuing to the next pipeline.
+Skipped pipeline #31 due to time out. Continuing to the next pipeline.
+                 Optimization Progress:  13%|█▎        | 13/100 [1:35:23<27:39:48, 1144.70s/pipeline]                                                                                    Optimization Progress:  17%|█▋        | 17/100 [1:35:23<26:23:30, 1144.70s/pipeline]                                                                                    Optimization Progress:  21%|██        | 21/100 [1:35:23<25:07:11, 1144.70s/pipeline]                                                                                    Optimization Progress:  25%|██▌       | 25/100 [1:35:23<23:50:52, 1144.70s/pipeline]                                                                                    Optimization Progress:  27%|██▋       | 27/100 [1:35:23<23:12:43, 1144.70s/pipeline]                                                                                    Optimization Progress:  31%|███       | 31/100 [1:35:23<21:56:24, 1144.70s/pipeline]                                   Skipped pipeline #33 due to time out. Continuing to the next pipeline.
+Skipped pipeline #35 due to time out. Continuing to the next pipeline.
+Skipped pipeline #40 due to time out. Continuing to the next pipeline.
+Skipped pipeline #43 due to time out. Continuing to the next pipeline.
+Skipped pipeline #45 due to time out. Continuing to the next pipeline.
+Skipped pipeline #49 due to time out. Continuing to the next pipeline.
+                                                 Optimization Progress:  33%|███▎      | 33/100 [1:35:23<21:18:14, 1144.70s/pipeline]                                                                                    Optimization Progress:  35%|███▌      | 35/100 [1:35:23<20:40:05, 1144.70s/pipeline]                                                                                    Optimization Progress:  40%|████      | 40/100 [1:35:23<19:04:41, 1144.70s/pipeline]                                                                                    Optimization Progress:  43%|████▎     | 43/100 [1:35:23<18:07:27, 1144.70s/pipeline]                                                                                    Optimization Progress:  45%|████▌     | 45/100 [1:35:23<17:29:18, 1144.70s/pipeline]                                                                                    Optimization Progress:  49%|████▉     | 49/100 [1:35:23<16:12:59Skipped pipeline #60 due to time out. Continuing to the next pipeline.
+Skipped pipeline #64 due to time out. Continuing to the next pipeline.
+Skipped pipeline #69 due to time out. Continuing to the next pipeline.
+Skipped pipeline #76 due to time out. Continuing to the next pipeline.
+Skipped pipeline #78 due to time out. Continuing to the next pipeline.
+, 1144.70s/pipeline]                                                                                    Optimization Progress:  60%|██████    | 60/100 [1:35:23<12:43:07, 1144.70s/pipeline]                                                                                    Optimization Progress:  64%|██████▍   | 64/100 [1:35:23<11:26:49, 1144.70s/pipeline]                                                                                    Optimization Progress:  69%|██████▉   | 69/100 [1:35:23<9:51:25, 1144.70s/pipeline]                                                                                   Optimization Progress:  76%|███████▌  | 76/100 [1:35:23<7:37:52, 1144.70s/pipeline]                                                                                   Optimization Progress:  78%|███████▊  | 78/100 [1:35:23<6:59:43, 1144.70s/pipeline]                                                                                 Skipped pipeline #81 due to time out. Continuing to the next pipeline.
+
+95.75 minutes have elapsed. TPOT will close down.
+TPOT closed during evaluation in one generation.
+WARNING: TPOT may not provide a good pipeline if TPOT is stopped/interrupted in a early generation.
+
+
+TPOT closed prematurely. Will use the current best pipeline.
+31 operators have been imported by TPOT.
+Skipped pipeline #11 due to time out. Continuing to the next pipeline.
+  Optimization Progress:  81%|████████  | 81/100 [1:35:23<6:02:29, 1144.70s/pipeline]                                                                                   Optimization Progress: 103pipeline [1:35:23, 1144.70s/pipeline]                                                               Optimization Progress: 103pipeline [1:35:23, 1144.70s/pipeline]                                                               Optimization Progress: 103pipeline [1:35:23, 1144.70s/pipeline]                                                               Optimization Progress: 103pipeline [1:35:23, 1144.70s/pipeline]                                                               Optimization Progress:   0%|          | 0/100 [00:00<?, ?pipeline/s]Optimization Progress:   5%|▌         | 5/100 [1:31:43<29:02:45, 1100.69s/pipeline]                                                                                   Optimization Progress:  11%|█         | 11/100 [1:31:43<27:12:41, 1100.69s/piSkipped pipeline #16 due to time out. Continuing to the next pipeline.
+Skipped pipeline #20 due to time out. Continuing to the next pipeline.
+Skipped pipeline #24 due to time out. Continuing to the next pipeline.
+Skipped pipeline #26 due to time out. Continuing to the next pipeline.
+Skipped pipeline #30 due to time out. Continuing to the next pipeline.
+Skipped pipeline #32 due to time out. Continuing to the next pipeline.
+peline]                                                                                    Optimization Progress:  16%|█▌        | 16/100 [1:31:43<25:40:58, 1100.69s/pipeline]                                                                                    Optimization Progress:  20%|██        | 20/100 [1:31:43<24:27:35, 1100.69s/pipeline]                                                                                    Optimization Progress:  24%|██▍       | 24/100 [1:31:43<23:14:12, 1100.69s/pipeline]                                                                                    Optimization Progress:  26%|██▌       | 26/100 [1:31:43<22:37:31, 1100.69s/pipeline]                                                                                    Optimization Progress:  30%|███       | 30/100 [1:31:43<21:24:08, 1100.69s/pipeline]                                                                                    Optimization Progress:  32%|███▏      | 3Skipped pipeline #34 due to time out. Continuing to the next pipeline.
+Skipped pipeline #39 due to time out. Continuing to the next pipeline.
+Skipped pipeline #42 due to time out. Continuing to the next pipeline.
+Skipped pipeline #47 due to time out. Continuing to the next pipeline.
+Skipped pipeline #58 due to time out. Continuing to the next pipeline.
+2/100 [1:31:43<20:47:27, 1100.69s/pipeline]                                                                                    Optimization Progress:  34%|███▍      | 34/100 [1:31:43<20:10:45, 1100.69s/pipeline]                                                                                    Optimization Progress:  39%|███▉      | 39/100 [1:31:43<18:39:02, 1100.69s/pipeline]                                                                                    Optimization Progress:  42%|████▏     | 42/100 [1:31:43<17:44:00, 1100.69s/pipeline]                                                                                    Optimization Progress:  47%|████▋     | 47/100 [1:31:43<16:12:16, 1100.69s/pipeline]                                                                                    Optimization Progress:  58%|█████▊    | 58/100 [1:31:43<12:50:29, 1100.69s/pipeline]                                                                             Skipped pipeline #62 due to time out. Continuing to the next pipeline.
+Skipped pipeline #67 due to time out. Continuing to the next pipeline.
+Skipped pipeline #74 due to time out. Continuing to the next pipeline.
+Skipped pipeline #76 due to time out. Continuing to the next pipeline.
+Skipped pipeline #79 due to time out. Continuing to the next pipeline.
+
+       Optimization Progress:  62%|██████▏   | 62/100 [1:31:43<11:37:06, 1100.69s/pipeline]                                                                                    Optimization Progress:  67%|██████▋   | 67/100 [1:31:43<10:05:22, 1100.69s/pipeline]                                                                                    Optimization Progress:  74%|███████▍  | 74/100 [1:31:43<7:56:57, 1100.69s/pipeline]                                                                                   Optimization Progress:  76%|███████▌  | 76/100 [1:31:43<7:20:16, 1100.69s/pipeline]                                                                                   Optimization Progress:  79%|███████▉  | 79/100 [1:31:43<6:25:14, 1100.69s/pipeline]                                                                                   Optimization Progress: 101pipeline [1:31:43, 1100.69s/pipeline]                          92.08 minutes have elapsed. TPOT will close down.
+TPOT closed during evaluation in one generation.
+WARNING: TPOT may not provide a good pipeline if TPOT is stopped/interrupted in a early generation.
+
+
+TPOT closed prematurely. Will use the current best pipeline.
+31 operators have been imported by TPOT.
+Skipped pipeline #11 due to time out. Continuing to the next pipeline.
+Skipped pipeline #13 due to time out. Continuing to the next pipeline.
+Skipped pipeline #17 due to time out. Continuing to the next pipeline.
+Skipped pipeline #21 due to time out. Continuing to the next pipeline.
+                                     Optimization Progress: 101pipeline [1:31:43, 1100.69s/pipeline]                                                               Optimization Progress: 101pipeline [1:31:43, 1100.69s/pipeline]                                                               Optimization Progress: 101pipeline [1:31:43, 1100.69s/pipeline]                                                               Optimization Progress:   0%|          | 0/100 [00:00<?, ?pipeline/s]Optimization Progress:   5%|▌         | 5/100 [1:56:54<37:01:14, 1402.89s/pipeline]                                                                                   Optimization Progress:  11%|█         | 11/100 [1:56:54<34:40:57, 1402.89s/pipeline]                                                                                    Optimization Progress:  13%|█▎        | 13/100 [1:56:54<33:54:11, 1402.89s/pipeline]                                                                                    OptimizatiSkipped pipeline #25 due to time out. Continuing to the next pipeline.
+Skipped pipeline #27 due to time out. Continuing to the next pipeline.
+Skipped pipeline #30 due to time out. Continuing to the next pipeline.
+Skipped pipeline #32 due to time out. Continuing to the next pipeline.
+on Progress:  17%|█▋        | 17/100 [1:56:54<32:20:39, 1402.89s/pipeline]                                                                                    Optimization Progress:  21%|██        | 21/100 [1:56:54<30:47:08, 1402.89s/pipeline]                                                                                    Optimization Progress:  25%|██▌       | 25/100 [1:56:54<29:13:36, 1402.89s/pipeline]                                                                                    Optimization Progress:  27%|██▋       | 27/100 [1:56:54<28:26:50, 1402.89s/pipeline]                                                                                    Optimization Progress:  30%|███       | 30/100 [1:56:54<27:16:42, 1402.89s/pipeline]                                                                                    Optimization Progress:  32%|███▏      | 32/100 [1:56:54<26:29:56, 1402.89s/pipeline]                                                            Skipped pipeline #34 due to time out. Continuing to the next pipeline.
+Skipped pipeline #39 due to time out. Continuing to the next pipeline.
+Skipped pipeline #42 due to time out. Continuing to the next pipeline.
+Skipped pipeline #47 due to time out. Continuing to the next pipeline.
+Skipped pipeline #58 due to time out. Continuing to the next pipeline.
+Skipped pipeline #62 due to time out. Continuing to the next pipeline.
+                        Optimization Progress:  34%|███▍      | 34/100 [1:56:54<25:43:10, 1402.89s/pipeline]                                                                                    Optimization Progress:  39%|███▉      | 39/100 [1:56:54<23:46:16, 1402.89s/pipeline]                                                                                    Optimization Progress:  42%|████▏     | 42/100 [1:56:54<22:36:07, 1402.89s/pipeline]                                                                                    Optimization Progress:  47%|████▋     | 47/100 [1:56:54<20:39:13, 1402.89s/pipeline]                                                                                    Optimization Progress:  58%|█████▊    | 58/100 [1:56:54<16:22:01, 1402.89s/pipeline]                                                                                    Optimization Progress:  62%|██████▏   | 62/100 [1:56:54<14:48:29, 1402.89s/pipeliSkipped pipeline #66 due to time out. Continuing to the next pipeline.
+Skipped pipeline #73 due to time out. Continuing to the next pipeline.
+Skipped pipeline #75 due to time out. Continuing to the next pipeline.
+Skipped pipeline #78 due to time out. Continuing to the next pipeline.
+Skipped pipeline #80 due to time out. Continuing to the next pipeline.
+
+ne]                                                                                    Optimization Progress:  66%|██████▌   | 66/100 [1:56:54<13:14:58, 1402.89s/pipeline]                                                                                    Optimization Progress:  73%|███████▎  | 73/100 [1:56:54<10:31:17, 1402.89s/pipeline]                                                                                    Optimization Progress:  75%|███████▌  | 75/100 [1:56:54<9:44:32, 1402.89s/pipeline]                                                                                   Optimization Progress:  78%|███████▊  | 78/100 [1:56:54<8:34:23, 1402.89s/pipeline]                                                                                   Optimization Progress:  80%|████████  | 80/100 [1:56:54<7:47:37, 1402.89s/pipeline]                                                                                   Optimiz117.26 minutes have elapsed. TPOT will close down.
+TPOT closed during evaluation in one generation.
+WARNING: TPOT may not provide a good pipeline if TPOT is stopped/interrupted in a early generation.
+
+
+TPOT closed prematurely. Will use the current best pipeline.
+31 operators have been imported by TPOT.
+Skipped pipeline #11 due to time out. Continuing to the next pipeline.
+Skipped pipeline #13 due to time out. Continuing to the next pipeline.
+ation Progress: 103pipeline [1:56:54, 1402.89s/pipeline]                                                               Optimization Progress: 103pipeline [1:56:54, 1402.89s/pipeline]                                                               Optimization Progress: 103pipeline [1:56:54, 1402.89s/pipeline]                                                               Optimization Progress: 103pipeline [1:56:54, 1402.89s/pipeline]                                                               Optimization Progress:   0%|          | 0/100 [00:00<?, ?pipeline/s]Optimization Progress:   5%|▌         | 5/100 [1:55:19<36:31:04, 1383.84s/pipeline]                                                                                   Optimization Progress:  11%|█         | 11/100 [1:55:19<34:12:41, 1383.84s/pipeline]                                                                                    Optimization Progress:  13%|█▎        | 13/100 [1:55:19<33:26:34, 1383.84s/pipeline]             Skipped pipeline #17 due to time out. Continuing to the next pipeline.
+Skipped pipeline #21 due to time out. Continuing to the next pipeline.
+Skipped pipeline #25 due to time out. Continuing to the next pipeline.
+Skipped pipeline #27 due to time out. Continuing to the next pipeline.
+Skipped pipeline #30 due to time out. Continuing to the next pipeline.
+Skipped pipeline #32 due to time out. Continuing to the next pipeline.
+                                                                       Optimization Progress:  17%|█▋        | 17/100 [1:55:19<31:54:18, 1383.84s/pipeline]                                                                                    Optimization Progress:  21%|██        | 21/100 [1:55:19<30:22:03, 1383.84s/pipeline]                                                                                    Optimization Progress:  25%|██▌       | 25/100 [1:55:19<28:49:48, 1383.84s/pipeline]                                                                                    Optimization Progress:  27%|██▋       | 27/100 [1:55:19<28:03:40, 1383.84s/pipeline]                                                                                    Optimization Progress:  30%|███       | 30/100 [1:55:19<26:54:28, 1383.84s/pipeline]                                                                                    Optimization Progress:  32%|███▏      | 32/100 [1:55:19<26:08:Skipped pipeline #34 due to time out. Continuing to the next pipeline.
+Skipped pipeline #39 due to time out. Continuing to the next pipeline.
+Skipped pipeline #42 due to time out. Continuing to the next pipeline.
+Skipped pipeline #47 due to time out. Continuing to the next pipeline.
+Skipped pipeline #58 due to time out. Continuing to the next pipeline.
+Skipped pipeline #62 due to time out. Continuing to the next pipeline.
+21, 1383.84s/pipeline]                                                                                    Optimization Progress:  34%|███▍      | 34/100 [1:55:19<25:22:13, 1383.84s/pipeline]                                                                                    Optimization Progress:  39%|███▉      | 39/100 [1:55:19<23:26:54, 1383.84s/pipeline]                                                                                    Optimization Progress:  42%|████▏     | 42/100 [1:55:19<22:17:42, 1383.84s/pipeline]                                                                                    Optimization Progress:  47%|████▋     | 47/100 [1:55:19<20:22:23, 1383.84s/pipeline]                                                                                    Optimization Progress:  58%|█████▊    | 58/100 [1:55:19<16:08:41, 1383.84s/pipeline]                                                                                    OptimizationSkipped pipeline #66 due to time out. Continuing to the next pipeline.
+Skipped pipeline #73 due to time out. Continuing to the next pipeline.
+Skipped pipeline #75 due to time out. Continuing to the next pipeline.
+Skipped pipeline #78 due to time out. Continuing to the next pipeline.
+Skipped pipeline #80 due to time out. Continuing to the next pipeline.
+ Progress:  62%|██████▏   | 62/100 [1:55:19<14:36:25, 1383.84s/pipeline]                                                                                    Optimization Progress:  66%|██████▌   | 66/100 [1:55:19<13:04:10, 1383.84s/pipeline]                                                                                    Optimization Progress:  73%|███████▎  | 73/100 [1:55:19<10:22:43, 1383.84s/pipeline]                                                                                    Optimization Progress:  75%|███████▌  | 75/100 [1:55:19<9:36:36, 1383.84s/pipeline]                                                                                   Optimization Progress:  78%|███████▊  | 78/100 [1:55:19<8:27:24, 1383.84s/pipeline]                                                                                   Optimization Progress:  80%|████████  | 80/100 [1:55:19<7:41:16, 1383.84s/pipeline]         
+115.68 minutes have elapsed. TPOT will close down.
+TPOT closed during evaluation in one generation.
+WARNING: TPOT may not provide a good pipeline if TPOT is stopped/interrupted in a early generation.
+
+
+TPOT closed prematurely. Will use the current best pipeline.
+   model_name  train_max_angle  test_max_angle  accuracy
+0        tpot              0.0             0.0     0.876
+1        tpot              0.0            36.0     0.554
+2        tpot              0.0            72.0     0.358
+3        tpot              0.0           108.0     0.256
+4        tpot              0.0           144.0     0.231
+5        tpot              0.0           180.0     0.236
+6        tpot             36.0             0.0     0.828
+7        tpot             36.0            36.0     0.825
+8        tpot             36.0            72.0     0.586
+9        tpot             36.0           108.0     0.419
+10       tpot             36.0           144.0     0.351
+11       tpot             36.0           180.0     0.358
+12       tpot             72.0             0.0     0.805
+13       tpot             72.0            36.0     0.800
+14       tpot             72.0            72.0     0.790
+15       tpot             72.0           108.0     0.631
+16       tpot             72.0           144.0     0.541
+17       tpot             72.0           180.0     0.507
+18       tpot            108.0             0.0     0.762
+19       tpot            108.0            36.0     0.768
+20       tpot            108.0            72.0     0.774
+21       tpot            108.0           108.0     0.769
+22       tpot            108.0           144.0     0.689
+23       tpot            108.0           180.0     0.612
+24       tpot            144.0             0.0     0.749
+25       tpot            144.0            36.0     0.747
+26       tpot            144.0            72.0     0.752
+27       tpot            144.0           108.0     0.753
+28       tpot            144.0           144.0     0.752
+29       tpot            144.0           180.0     0.680
+30       tpot            180.0             0.0     0.736
+31       tpot            180.0            36.0     0.733
+32       tpot            180.0            72.0     0.738
+33       tpot            180.0           108.0     0.736
+34       tpot            180.0           144.0     0.738
+35       tpot            180.0           180.0     0.737
+                                                                          Optimization Progress: 103pipeline [1:55:19, 1383.84s/pipeline]                                                               Optimization Progress: 103pipeline [1:55:19, 1383.84s/pipeline]                                                               Optimization Progress: 103pipeline [1:55:19, 1383.84s/pipeline]                                                               Optimization Progress: 103pipeline [1:55:19, 1383.84s/pipeline]                                                               

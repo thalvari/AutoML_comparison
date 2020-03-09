@@ -1,0 +1,98 @@
+2020-03-08 05:52:58.937016: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/opt/Java/1.8.0_144/lib:/appl/opt/cuDNN/7.5.0.56-CUDA-10.0.130/lib64:/appl/opt/CUDA/10.0.130/nvvm/lib64:/appl/opt/CUDA/10.0.130/extras/CUPTI/lib64:/appl/opt/CUDA/10.0.130/lib64:/appl/opt/Python/3.7.0-intel-2018b/lib/python3.7/site-packages/numpy-1.14.5-py3.7-linux-x86_64.egg/numpy/core/lib:/appl/opt/Python/3.7.0-intel-2018b/lib:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib64:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib:/appl/opt/GMP/6.1.2-GCCcore-7.3.0/lib:/appl/opt/XZ/5.2.4-GCCcore-7.3.0/lib:/appl/opt/SQLite/3.24.0-intel-2018b/lib:/appl/opt/Tcl/8.6.8-GCCcore-7.3.0/lib:/appl/opt/libreadline/7.0-intel-2018b/lib:/appl/opt/ncurses/6.1-intel-2018b/lib:/appl/opt/zlib/1.2.11-GCCcore-7.3.0/lib:/appl/opt/bzip2/1.0.6-GCCcore-7.3.0/lib:/appl/opt/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64:/appl/opt/imkl/2018.3.222-iimpi-2018b/lib/intel64:/appl/opt/impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30/lib64:/appl/opt/ifort/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/tbb/lib/intel64/gcc4.4:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/binutils/2.30-GCCcore-7.3.0/lib:/appl/opt/GCCcore/7.3.0/lib/gcc/x86_64-pc-linux-gnu/7.3.0:/appl/opt/GCCcore/7.3.0/lib64:/appl/opt/GCCcore/7.3.0/lib
+2020-03-08 05:52:58.938156: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/opt/Java/1.8.0_144/lib:/appl/opt/cuDNN/7.5.0.56-CUDA-10.0.130/lib64:/appl/opt/CUDA/10.0.130/nvvm/lib64:/appl/opt/CUDA/10.0.130/extras/CUPTI/lib64:/appl/opt/CUDA/10.0.130/lib64:/appl/opt/Python/3.7.0-intel-2018b/lib/python3.7/site-packages/numpy-1.14.5-py3.7-linux-x86_64.egg/numpy/core/lib:/appl/opt/Python/3.7.0-intel-2018b/lib:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib64:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib:/appl/opt/GMP/6.1.2-GCCcore-7.3.0/lib:/appl/opt/XZ/5.2.4-GCCcore-7.3.0/lib:/appl/opt/SQLite/3.24.0-intel-2018b/lib:/appl/opt/Tcl/8.6.8-GCCcore-7.3.0/lib:/appl/opt/libreadline/7.0-intel-2018b/lib:/appl/opt/ncurses/6.1-intel-2018b/lib:/appl/opt/zlib/1.2.11-GCCcore-7.3.0/lib:/appl/opt/bzip2/1.0.6-GCCcore-7.3.0/lib:/appl/opt/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64:/appl/opt/imkl/2018.3.222-iimpi-2018b/lib/intel64:/appl/opt/impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30/lib64:/appl/opt/ifort/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/tbb/lib/intel64/gcc4.4:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/binutils/2.30-GCCcore-7.3.0/lib:/appl/opt/GCCcore/7.3.0/lib/gcc/x86_64-pc-linux-gnu/7.3.0:/appl/opt/GCCcore/7.3.0/lib64:/appl/opt/GCCcore/7.3.0/lib
+2020-03-08 05:52:58.938186: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Using TensorFlow backend.
+Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex.
+31 operators have been imported by TPOT.
+Skipped pipeline #91 due to time out. Continuing to the next pipeline.
+Skipped pipeline #100 due to time out. Continuing to the next pipeline.
+_pre_test decorator: _random_mutation_operator: num_test=0 Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True.
+_pre_test decorator: _random_mutation_operator: num_test=0 Negative values in data passed to MultinomialNB (input X).
+_pre_test decorator: _random_mutation_operator: num_test=0 Negative values in data passed to MultinomialNB (input X).
+Optimization Progress:   0%|          | 0/100 [00:00<?, ?pipeline/s]Optimization Progress:   5%|▌         | 5/100 [5:15:52<100:01:31, 3790.44s/pipeline]Optimization Progress:  85%|████████▌ | 85/100 [11:16:10<11:23:35, 2734.37s/pipeline]                                                                                     Optimization Progress:  91%|█████████ | 91/100 [11:16:10<6:50:09, 2734.37s/pipeline]                                                                                    Optimization Progress: 100%|██████████| 100/100 [11:16:10<00:00, 2734.37s/pipeline]                                                                                   Optimization Progress: 102pipeline [11:16:15, 2734.37s/pipeline]Optimization Progress: 102pipeline [11:16:15, 1914.14s/pipeline]                                                                Optimization Progress: 102pipeline [11:23:04, 1914.14s/pipeline]                                     _pre_test decorator: _random_mutation_operator: num_test=0 Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty..
+_pre_test decorator: _random_mutation_operator: num_test=0 Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True.
+_pre_test decorator: _random_mutation_operator: num_test=0 Negative values in data passed to MultinomialNB (input X).
+
+683.68 minutes have elapsed. TPOT will close down.
+TPOT closed during evaluation in one generation.
+WARNING: TPOT may not provide a good pipeline if TPOT is stopped/interrupted in a early generation.
+
+                           Optimization Progress: 102pipeline [11:23:08, 1914.14s/pipeline]                                                                Optimization Progress: 102pipeline [11:23:09, 1914.14s/pipeline]                                                                Optimization Progress: 102pipeline [11:23:10, 1914.14s/pipeline]                                                                Optimization Progress: 102pipeline [11:23:10, 1914.14s/pipeline]Optimization Progress:  53%|█████▎    | 106/200 [11:23:16<35:48:40, 1371.49s/pipeline]                                                                                      Optimization Progress:  53%|█████▎    | 106/200 [11:23:16<35:48:40, 1371.49s/pipeline]                                                                                      Optimization Progress:  53%|█████▎    | 106/200 [11:23:16<35:48:40, 1371.49s/pipeline]                                                                
+TPOT closed prematurely. Will use the current best pipeline.
+31 operators have been imported by TPOT.
+Skipped pipeline #88 due to time out. Continuing to the next pipeline.
+Skipped pipeline #97 due to time out. Continuing to the next pipeline.
+                      Optimization Progress:  53%|█████▎    | 106/200 [11:23:16<35:48:40, 1371.49s/pipeline]                                                                                      Optimization Progress:  53%|█████▎    | 106/200 [11:23:16<35:48:40, 1371.49s/pipeline]                                                                                      Optimization Progress:   0%|          | 0/100 [00:00<?, ?pipeline/s]Optimization Progress:   5%|▌         | 5/100 [5:31:13<104:53:09, 3974.62s/pipeline]Optimization Progress:  85%|████████▌ | 85/100 [11:31:25<11:55:49, 2863.28s/pipeline]                                                                                     Optimization Progress:  88%|████████▊ | 88/100 [11:31:25<9:32:39, 2863.28s/pipeline]                                                                                    Optimization Progress:  97%|█████████▋| 97/100 [11:31:25<2:23:09, 2863_pre_test decorator: _random_mutation_operator: num_test=0 Found array with 0 feature(s) (shape=(50, 0)) while a minimum of 1 is required..
+_pre_test decorator: _random_mutation_operator: num_test=1 Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False.
+_pre_test decorator: _random_mutation_operator: num_test=0 Negative values in data passed to MultinomialNB (input X).
+_pre_test decorator: _random_mutation_operator: num_test=0 Expected n_neighbors <= n_samples,  but n_samples = 50, n_neighbors = 56.
+_pre_test decorator: _random_mutation_operator: num_test=0 manhattan was provided as affinity. Ward can only work with euclidean distances..
+_pre_test decorator: _random_mutation_operator: num_test=0 Found array with 0 feature(s) (shape=(50, 0)) while a minimum of 1 is required..
+_pre_test decorator: _random_mutation_operator: num_test=0 Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty..
+_pre_test decorator: _random_mutation_operator: num_test=0 Found array with 0 feature(s) (shape=(50, 0)) while a minimum of 1 is required..
+.28s/pipeline]                                                                                    Optimization Progress: 102pipeline [11:31:31, 2863.28s/pipeline]Optimization Progress: 102pipeline [11:31:31, 2004.40s/pipeline]                                                                Optimization Progress: 102pipeline [11:31:31, 2004.40s/pipeline]                                                                Optimization Progress: 102pipeline [11:31:34, 2004.40s/pipeline]                                                                Optimization Progress: 102pipeline [11:31:34, 2004.40s/pipeline]                                                                Optimization Progress: 102pipeline [11:31:35, 2004.40s/pipeline]                                                                Optimization Progress: 102pipeline [11:31:36, 2004.40s/pipeline]                                                                Optimization Progress: 102pipeline [11:31:41, 2004.40s/pipeline]       _pre_test decorator: _random_mutation_operator: num_test=0 Expected n_neighbors <= n_samples,  but n_samples = 50, n_neighbors = 52.
+_pre_test decorator: _random_mutation_operator: num_test=0 Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty..
+Pipeline encountered that has previously been evaluated during the optimization process. Using the score from the previous evaluation.
+Pipeline encountered that has previously been evaluated during the optimization process. Using the score from the previous evaluation.
+Pipeline encountered that has previously been evaluated during the optimization process. Using the score from the previous evaluation.
+                                                         Optimization Progress: 102pipeline [11:31:42, 2004.40s/pipeline]                                                                Optimization Progress: 102pipeline [11:31:44, 2004.40s/pipeline]                                                                Optimization Progress: 102pipeline [11:31:45, 2004.40s/pipeline]Optimization Progress:  53%|█████▎    | 106/200 [11:31:51<36:40:30, 1404.58s/pipeline]                                                                                      Optimization Progress:  53%|█████▎    | 106/200 [11:31:51<36:40:30, 1404.58s/pipeline]                                                                                      Optimization Progress:  54%|█████▎    | 107/200 [11:31:51<36:17:05, 1404.58s/pipeline]                                                                                      Optimization Progress:  54%|█████▍    | 108/200 [11:31:51<35:53:4
+692.26 minutes have elapsed. TPOT will close down.
+TPOT closed during evaluation in one generation.
+WARNING: TPOT may not provide a good pipeline if TPOT is stopped/interrupted in a early generation.
+
+
+TPOT closed prematurely. Will use the current best pipeline.
+31 operators have been imported by TPOT.
+1, 1404.58s/pipeline]                                                                                      Optimization Progress:  55%|█████▍    | 109/200 [11:31:51<35:30:16, 1404.58s/pipeline]                                                                                      Optimization Progress:  55%|█████▍    | 109/200 [11:31:51<35:30:16, 1404.58s/pipeline]                                                                                      Optimization Progress:  55%|█████▍    | 109/200 [11:31:51<35:30:16, 1404.58s/pipeline]                                                                                      Optimization Progress:  55%|█████▍    | 109/200 [11:31:51<35:30:16, 1404.58s/pipeline]                                                                                      Optimization Progress:   0%|          | 0/100 [00:00<?, ?pipeline/s]Optimization Progress:   5%|▌         | 5/100 [5:30:30<104:39:40, 3966.11s/pipeline]OptimizatiSkipped pipeline #91 due to time out. Continuing to the next pipeline.
+Skipped pipeline #100 due to time out. Continuing to the next pipeline.
+_pre_test decorator: _random_mutation_operator: num_test=0 Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True.
+_pre_test decorator: _random_mutation_operator: num_test=0 Negative values in data passed to MultinomialNB (input X).
+_pre_test decorator: _random_mutation_operator: num_test=0 Negative values in data passed to MultinomialNB (input X).
+_pre_test decorator: _random_mutation_operator: num_test=0 Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty..
+on Progress:  85%|████████▌ | 85/100 [11:30:47<11:54:20, 2857.34s/pipeline]                                                                                     Optimization Progress:  91%|█████████ | 91/100 [11:30:47<7:08:36, 2857.34s/pipeline]                                                                                    Optimization Progress: 100%|██████████| 100/100 [11:30:47<00:00, 2857.34s/pipeline]                                                                                   Optimization Progress: 102pipeline [11:30:51, 2857.34s/pipeline]Optimization Progress: 102pipeline [11:30:51, 2000.22s/pipeline]                                                                Optimization Progress: 102pipeline [11:36:46, 2000.22s/pipeline]                                                                Optimization Progress: 102pipeline [11:36:50, 2000.22s/pipeline]                                                                Optimiz_pre_test decorator: _random_mutation_operator: num_test=0 Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True.
+_pre_test decorator: _random_mutation_operator: num_test=0 Negative values in data passed to MultinomialNB (input X).
+
+697.37 minutes have elapsed. TPOT will close down.
+TPOT closed during evaluation in one generation.
+WARNING: TPOT may not provide a good pipeline if TPOT is stopped/interrupted in a early generation.
+
+ation Progress: 102pipeline [11:36:52, 2000.22s/pipeline]                                                                Optimization Progress: 102pipeline [11:36:52, 2000.22s/pipeline]                                                                Optimization Progress: 102pipeline [11:36:52, 2000.22s/pipeline]Optimization Progress:  53%|█████▎    | 106/200 [11:36:59<37:16:43, 1427.70s/pipeline]                                                                                      Optimization Progress:  53%|█████▎    | 106/200 [11:36:59<37:16:43, 1427.70s/pipeline]                                                                                      Optimization Progress:  53%|█████▎    | 106/200 [11:36:59<37:16:43, 1427.70s/pipeline]                                                                                      Optimization Progress:  53%|█████▎    | 106/200 [11:36:59<37:16:43, 1427.70s/pipeline]                                            
+TPOT closed prematurely. Will use the current best pipeline.
+   model_name  train_std  test_std  accuracy
+0        tpot        0.0       0.0     0.882
+1        tpot        0.0      51.0     0.578
+2        tpot        0.0     102.0     0.449
+3        tpot        0.0     153.0     0.346
+4        tpot        0.0     204.0     0.279
+5        tpot        0.0     255.0     0.239
+6        tpot       51.0       0.0     0.846
+7        tpot       51.0      51.0     0.832
+8        tpot       51.0     102.0     0.767
+9        tpot       51.0     153.0     0.613
+10       tpot       51.0     204.0     0.449
+11       tpot       51.0     255.0     0.343
+12       tpot      102.0       0.0     0.801
+13       tpot      102.0      51.0     0.795
+14       tpot      102.0     102.0     0.782
+15       tpot      102.0     153.0     0.762
+16       tpot      102.0     204.0     0.729
+17       tpot      102.0     255.0     0.678
+18       tpot      153.0       0.0     0.746
+19       tpot      153.0      51.0     0.755
+20       tpot      153.0     102.0     0.758
+21       tpot      153.0     153.0     0.742
+22       tpot      153.0     204.0     0.668
+23       tpot      153.0     255.0     0.567
+24       tpot      204.0       0.0     0.733
+25       tpot      204.0      51.0     0.733
+26       tpot      204.0     102.0     0.739
+27       tpot      204.0     153.0     0.731
+28       tpot      204.0     204.0     0.697
+29       tpot      204.0     255.0     0.653
+30       tpot      255.0       0.0     0.694
+31       tpot      255.0      51.0     0.698
+32       tpot      255.0     102.0     0.702
+33       tpot      255.0     153.0     0.708
+34       tpot      255.0     204.0     0.692
+35       tpot      255.0     255.0     0.663
+                                          Optimization Progress:  53%|█████▎    | 106/200 [11:36:59<37:16:43, 1427.70s/pipeline]                                                                                      

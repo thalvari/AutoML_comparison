@@ -1,0 +1,85 @@
+2020-03-05 22:13:08.176312: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/opt/Java/1.8.0_144/lib:/appl/opt/cuDNN/7.5.0.56-CUDA-10.0.130/lib64:/appl/opt/CUDA/10.0.130/nvvm/lib64:/appl/opt/CUDA/10.0.130/extras/CUPTI/lib64:/appl/opt/CUDA/10.0.130/lib64:/appl/opt/Python/3.7.0-intel-2018b/lib/python3.7/site-packages/numpy-1.14.5-py3.7-linux-x86_64.egg/numpy/core/lib:/appl/opt/Python/3.7.0-intel-2018b/lib:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib64:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib:/appl/opt/GMP/6.1.2-GCCcore-7.3.0/lib:/appl/opt/XZ/5.2.4-GCCcore-7.3.0/lib:/appl/opt/SQLite/3.24.0-intel-2018b/lib:/appl/opt/Tcl/8.6.8-GCCcore-7.3.0/lib:/appl/opt/libreadline/7.0-intel-2018b/lib:/appl/opt/ncurses/6.1-intel-2018b/lib:/appl/opt/zlib/1.2.11-GCCcore-7.3.0/lib:/appl/opt/bzip2/1.0.6-GCCcore-7.3.0/lib:/appl/opt/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64:/appl/opt/imkl/2018.3.222-iimpi-2018b/lib/intel64:/appl/opt/impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30/lib64:/appl/opt/ifort/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/tbb/lib/intel64/gcc4.4:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/binutils/2.30-GCCcore-7.3.0/lib:/appl/opt/GCCcore/7.3.0/lib/gcc/x86_64-pc-linux-gnu/7.3.0:/appl/opt/GCCcore/7.3.0/lib64:/appl/opt/GCCcore/7.3.0/lib
+2020-03-05 22:13:08.178907: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/opt/Java/1.8.0_144/lib:/appl/opt/cuDNN/7.5.0.56-CUDA-10.0.130/lib64:/appl/opt/CUDA/10.0.130/nvvm/lib64:/appl/opt/CUDA/10.0.130/extras/CUPTI/lib64:/appl/opt/CUDA/10.0.130/lib64:/appl/opt/Python/3.7.0-intel-2018b/lib/python3.7/site-packages/numpy-1.14.5-py3.7-linux-x86_64.egg/numpy/core/lib:/appl/opt/Python/3.7.0-intel-2018b/lib:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib64:/appl/opt/libffi/3.2.1-GCCcore-7.3.0/lib:/appl/opt/GMP/6.1.2-GCCcore-7.3.0/lib:/appl/opt/XZ/5.2.4-GCCcore-7.3.0/lib:/appl/opt/SQLite/3.24.0-intel-2018b/lib:/appl/opt/Tcl/8.6.8-GCCcore-7.3.0/lib:/appl/opt/libreadline/7.0-intel-2018b/lib:/appl/opt/ncurses/6.1-intel-2018b/lib:/appl/opt/zlib/1.2.11-GCCcore-7.3.0/lib:/appl/opt/bzip2/1.0.6-GCCcore-7.3.0/lib:/appl/opt/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64:/appl/opt/imkl/2018.3.222-iimpi-2018b/lib/intel64:/appl/opt/impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30/lib64:/appl/opt/ifort/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/tbb/lib/intel64/gcc4.4:/appl/opt/icc/2018.3.222-GCC-7.3.0-2.30/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64:/appl/opt/binutils/2.30-GCCcore-7.3.0/lib:/appl/opt/GCCcore/7.3.0/lib/gcc/x86_64-pc-linux-gnu/7.3.0:/appl/opt/GCCcore/7.3.0/lib64:/appl/opt/GCCcore/7.3.0/lib
+2020-03-05 22:13:08.178955: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Using TensorFlow backend.
+Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex.
+31 operators have been imported by TPOT.
+Skipped pipeline #11 due to time out. Continuing to the next pipeline.
+Skipped pipeline #16 due to time out. Continuing to the next pipeline.
+Skipped pipeline #20 due to time out. Continuing to the next pipeline.
+Skipped pipeline #24 due to time out. Continuing to the next pipeline.
+Skipped pipeline #26 due to time out. Continuing to the next pipeline.
+Optimization Progress:   0%|          | 0/100 [00:00<?, ?pipeline/s]Optimization Progress:   5%|▌         | 5/100 [4:19:28<82:09:53, 3113.62s/pipeline]                                                                                   Optimization Progress:  11%|█         | 11/100 [4:19:28<76:58:31, 3113.62s/pipeline]                                                                                    Optimization Progress:  16%|█▌        | 16/100 [4:19:28<72:39:03, 3113.62s/pipeline]                                                                                    Optimization Progress:  20%|██        | 20/100 [4:19:28<69:11:29, 3113.62s/pipeline]                                                                                    Optimization Progress:  24%|██▍       | 24/100 [4:19:28<65:43:54, 3113.62s/pipeline]                                                                                    Optimization Progress:  26%|██▌       | 26/100 [4:19:28<64:00:07, 3113.62s/piSkipped pipeline #29 due to time out. Continuing to the next pipeline.
+Skipped pipeline #31 due to time out. Continuing to the next pipeline.
+Skipped pipeline #33 due to time out. Continuing to the next pipeline.
+Skipped pipeline #38 due to time out. Continuing to the next pipeline.
+Skipped pipeline #41 due to time out. Continuing to the next pipeline.
+Skipped pipeline #46 due to time out. Continuing to the next pipeline.
+peline]                                                                                    Optimization Progress:  29%|██▉       | 29/100 [4:19:28<61:24:26, 3113.62s/pipeline]                                                                                    Optimization Progress:  31%|███       | 31/100 [4:19:28<59:40:39, 3113.62s/pipeline]                                                                                    Optimization Progress:  33%|███▎      | 33/100 [4:19:28<57:56:52, 3113.62s/pipeline]                                                                                    Optimization Progress:  38%|███▊      | 38/100 [4:19:28<53:37:24, 3113.62s/pipeline]                                                                                    Optimization Progress:  41%|████      | 41/100 [4:19:28<51:01:43, 3113.62s/pipeline]                                                                                    Optimization Progress:  46%|███�Skipped pipeline #57 due to time out. Continuing to the next pipeline.
+Skipped pipeline #64 due to time out. Continuing to the next pipeline.
+Skipped pipeline #71 due to time out. Continuing to the next pipeline.
+Skipped pipeline #73 due to time out. Continuing to the next pipeline.
+Skipped pipeline #76 due to time out. Continuing to the next pipeline.
+�▌     | 46/100 [4:19:28<46:42:15, 3113.62s/pipeline]                                                                                    Optimization Progress:  57%|█████▋    | 57/100 [4:19:28<37:11:25, 3113.62s/pipeline]                                                                                    Optimization Progress:  64%|██████▍   | 64/100 [4:19:28<31:08:10, 3113.62s/pipeline]                                                                                    Optimization Progress:  71%|███████   | 71/100 [4:19:28<25:04:54, 3113.62s/pipeline]                                                                                    Optimization Progress:  73%|███████▎  | 73/100 [4:19:28<23:21:07, 3113.62s/pipeline]                                                                                    Optimization Progress:  76%|███████▌  | 76/100 [4:19:28<20:45:26, 3113.62s/pipeline]                                         Skipped pipeline #101 due to time out. Continuing to the next pipeline.
+Skipped pipeline #105 due to time out. Continuing to the next pipeline.
+Skipped pipeline #109 due to time out. Continuing to the next pipeline.
+Skipped pipeline #112 due to time out. Continuing to the next pipeline.
+Skipped pipeline #116 due to time out. Continuing to the next pipeline.
+_pre_test decorator: _random_mutation_operator: num_test=0 Found array with 0 feature(s) (shape=(50, 0)) while a minimum of 1 is required..
+_pre_test decorator: _random_mutation_operator: num_test=1 Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False.
+_pre_test decorator: _random_mutation_operator: num_test=0 Negative values in data passed to MultinomialNB (input X).
+                                           Optimization Progress: 101pipeline [4:19:28, 3113.62s/pipeline]                                                               Optimization Progress: 105pipeline [4:19:28, 3113.62s/pipeline]                                                               Optimization Progress: 109pipeline [4:19:28, 3113.62s/pipeline]                                                               Optimization Progress: 112pipeline [4:19:28, 3113.62s/pipeline]                                                               Optimization Progress: 116pipeline [4:19:28, 3113.62s/pipeline]                                                               Optimization Progress: 121pipeline [4:19:34, 3113.62s/pipeline]Optimization Progress: 121pipeline [4:19:34, 2179.55s/pipeline]                                                               Optimization Progress: 121pipeline [4:19:34, 2179.55s/pipeline]                                                               Optimization_pre_test decorator: _random_mutation_operator: num_test=0 Expected n_neighbors <= n_samples,  but n_samples = 50, n_neighbors = 56.
+_pre_test decorator: _random_mutation_operator: num_test=0 manhattan was provided as affinity. Ward can only work with euclidean distances..
+_pre_test decorator: _random_mutation_operator: num_test=0 Found array with 0 feature(s) (shape=(50, 0)) while a minimum of 1 is required..
+_pre_test decorator: _random_mutation_operator: num_test=0 Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty..
+_pre_test decorator: _random_mutation_operator: num_test=0 Found array with 0 feature(s) (shape=(50, 0)) while a minimum of 1 is required..
+_pre_test decorator: _random_mutation_operator: num_test=0 Expected n_neighbors <= n_samples,  but n_samples = 50, n_neighbors = 52.
+_pre_test decorator: _random_mutation_operator: num_test=0 Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty..
+ Progress: 121pipeline [4:19:37, 2179.55s/pipeline]                                                               Optimization Progress: 121pipeline [4:19:37, 2179.55s/pipeline]                                                               Optimization Progress: 121pipeline [4:19:39, 2179.55s/pipeline]                                                               Optimization Progress: 121pipeline [4:19:39, 2179.55s/pipeline]                                                               Optimization Progress: 121pipeline [4:19:45, 2179.55s/pipeline]                                                               Optimization Progress: 121pipeline [4:19:45, 2179.55s/pipeline]                                                               Optimization Progress: 121pipeline [4:19:48, 2179.55s/pipeline]                                                               Optimization Progress: 121pipeline [4:19:50, 2179.55s/pipeline]Optimization Progress:  62%|██████▎   | 125/200 [4:19:5Pipeline encountered that has previously been evaluated during the optimization process. Using the score from the previous evaluation.
+Pipeline encountered that has previously been evaluated during the optimization process. Using the score from the previous evaluation.
+Pipeline encountered that has previously been evaluated during the optimization process. Using the score from the previous evaluation.
+
+260.35 minutes have elapsed. TPOT will close down.
+TPOT closed during evaluation in one generation.
+WARNING: TPOT may not provide a good pipeline if TPOT is stopped/interrupted in a early generation.
+4<31:48:59, 1527.20s/pipeline]                                                                                     Optimization Progress:  62%|██████▎   | 125/200 [4:19:54<31:48:59, 1527.20s/pipeline]                                                                                     Optimization Progress:  63%|██████▎   | 126/200 [4:19:54<31:23:32, 1527.20s/pipeline]                                                                                     Optimization Progress:  64%|██████▎   | 127/200 [4:19:54<30:58:05, 1527.20s/pipeline]                                                                                     Optimization Progress:  64%|██████▍   | 128/200 [4:19:54<30:32:38, 1527.20s/pipeline]                                                                                     Optimization Progress:  64%|██████▍   | 128/200 [4:19:54<30:32:38, 1527.20s/pipeline]                                                          
+
+TPOT closed prematurely. Will use the current best pipeline.
+   model_name  train_max_angle  test_max_angle  accuracy
+0        tpot              0.0             0.0     0.876
+1        tpot              0.0            36.0     0.554
+2        tpot              0.0            72.0     0.358
+3        tpot              0.0           108.0     0.256
+4        tpot              0.0           144.0     0.231
+5        tpot              0.0           180.0     0.236
+6        tpot             36.0             0.0     0.828
+7        tpot             36.0            36.0     0.825
+8        tpot             36.0            72.0     0.586
+9        tpot             36.0           108.0     0.419
+10       tpot             36.0           144.0     0.351
+11       tpot             36.0           180.0     0.358
+12       tpot             72.0             0.0     0.805
+13       tpot             72.0            36.0     0.800
+14       tpot             72.0            72.0     0.790
+15       tpot             72.0           108.0     0.631
+16       tpot             72.0           144.0     0.541
+17       tpot             72.0           180.0     0.507
+18       tpot            108.0             0.0     0.762
+19       tpot            108.0            36.0     0.768
+20       tpot            108.0            72.0     0.774
+21       tpot            108.0           108.0     0.769
+22       tpot            108.0           144.0     0.689
+23       tpot            108.0           180.0     0.612
+24       tpot            144.0             0.0     0.749
+25       tpot            144.0            36.0     0.747
+26       tpot            144.0            72.0     0.752
+27       tpot            144.0           108.0     0.753
+28       tpot            144.0           144.0     0.752
+29       tpot            144.0           180.0     0.680
+30       tpot            180.0             0.0     0.736
+31       tpot            180.0            36.0     0.733
+32       tpot            180.0            72.0     0.738
+33       tpot            180.0           108.0     0.736
+34       tpot            180.0           144.0     0.738
+35       tpot            180.0           180.0     0.737
+                           Optimization Progress:  64%|██████▍   | 128/200 [4:19:54<30:32:38, 1527.20s/pipeline]                                                                                     Optimization Progress:  64%|██████▍   | 128/200 [4:19:54<30:32:38, 1527.20s/pipeline]                                                                                     
