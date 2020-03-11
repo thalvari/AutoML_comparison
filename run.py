@@ -344,8 +344,8 @@ def main(args):
         for err_level_test, err_x_test in enumerate(err_x_test_list):
             scores.append({
                 f"model_name": model_full_name,
-                f"train_{err_param_name}": np.round(err_params[err_level_train]),
-                f"test_{err_param_name}": np.round(err_params[err_level_test]),
+                f"train_{err_param_name}": err_params[err_level_train],
+                f"test_{err_param_name}": err_params[err_level_test],
                 "accuracy": model.predict(err_x_test, y_test),
             })
         model.shutdown()
