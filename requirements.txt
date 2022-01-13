@@ -62,7 +62,7 @@ papermill==2.0.0
 parso==0.6.2
 pathspec==0.7.0
 pickleshare==0.7.5
-Pillow==7.0.0
+Pillow==9.0.0
 prometheus-client==0.7.1
 prompt-toolkit==3.0.3
 protobuf==3.11.3
